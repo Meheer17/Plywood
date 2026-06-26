@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+:root {
+  --background: #F8F5F0; /* Warm Cream */
+  --foreground: #1B1B1B; /* Charcoal Black */
+  
+  --walnut: #3A2618;
+  --teak: #6B4A32;
+  --oak: #D7B899;
+  --cream: #F8F5F0;
+  --charcoal: #1B1B1B;
+  --gold: #C8A26A;
+}
+
+@theme {
+  --color-walnut: var(--walnut);
+  --color-teak: var(--teak);
+  --color-oak: var(--oak);
+  --color-cream: var(--cream);
+  --color-charcoal: var(--charcoal);
+  --color-gold: var(--gold);
+  
+  --font-serif: var(--font-serif), var(--font-serif-fallback, Georgia, serif);
+  --font-sans: var(--font-sans), var(--font-sans-fallback, sans-serif);
+}
+
+body {
+  background-color: var(--cream);
+  color: var(--charcoal);
+  font-family: var(--font-sans), sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom premium scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F8F5F0;
+}
+::-webkit-scrollbar-thumb {
+  background: #6B4A32;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3A2618;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Extra premium micro-interactions */
+.gold-glow {
+  box-shadow: 0 0 15px rgba(198, 162, 106, 0.15);
+}
+.gold-glow:hover {
+  box-shadow: 0 0 25px rgba(198, 162, 106, 0.35);
+}
+
+.text-stroke-gold {
+  -webkit-text-stroke: 1px rgba(200, 162, 106, 0.3);
+  color: transparent;
+}

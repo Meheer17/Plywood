@@ -1,0 +1,170 @@
+[
+  {
+    "id": "ply-01",
+    "name": "Aura Premium Birch Plywood",
+    "category": "Premium Plywood",
+    "image": "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?q=80&w=600",
+    "description": "Multi-layered Nordic Birch plywood offering outstanding strength, uniform surface finish, and minimal core voids. Perfect for bespoke high-end furniture, detailed joinery, and premium architectural millwork.",
+    "specs": {
+      "Thickness": "6mm, 12mm, 18mm, 24mm",
+      "Glue Type": "Phenolic resin / Exterior grade",
+      "Emission Grade": "E0 (Zero Formaldehyde)",
+      "Density": "680 - 700 kg/m³",
+      "Wood Species": "European White Birch",
+      "Origin": "Finland"
+    },
+    "features": [
+      "Superior screw holding strength",
+      "Perfect paint and veneer backing",
+      "No internal voids",
+      "FSC® and PEFC certified"
+    ]
+  },
+  {
+    "id": "mar-01",
+    "name": "Nautica Marine Plywood (BWP)",
+    "category": "Marine Plywood",
+    "image": "https://images.unsplash.com/photo-1541123437800-1bb1317bab8b?q=80&w=600",
+    "description": "Boiling Water Proof (BWP) marine grade plywood engineered to withstand harsh marine environments and high humidity. Bonded with premium synthetic resins to prevent delamination.",
+    "specs": {
+      "Thickness": "9mm, 12mm, 16mm, 19mm",
+      "Bonding": "Phenol Formaldehyde (PF) synthetic resin",
+      "Treatment": "Vacuum-pressure preservative treated",
+      "Moisture Resistance": "100% Waterproof",
+      "Wood Species": "Select Hardwood",
+      "Origin": "Southeastern Asia"
+    },
+    "features": [
+      "Lifetime guarantee against delamination",
+      "Termite and borer resistant",
+      "Ideal for premium yacht interiors",
+      "Tested under high pressure and boiling water"
+    ]
+  },
+  {
+    "id": "ven-01",
+    "name": "Imperial Smoked Walnut Veneer",
+    "category": "Veneers",
+    "image": "https://images.unsplash.com/photo-1533090161767-e6ffed986c88?q=80&w=600",
+    "description": "Exquisite smoked walnut wood veneer offering deep chocolate tones and striking golden highlights. Sliced with high precision to preserve the rich, natural grain flow for high-end interior panelling.",
+    "specs": {
+      "Thickness": "0.6mm (face veneer sheet)",
+      "Backing": "Fleece-backed / Raw paper sheet",
+      "Pattern": "Book matched / Quarter cut",
+      "Slicing Method": "Flat sliced",
+      "Wood Species": "American Black Walnut",
+      "Origin": "North America"
+    },
+    "features": [
+      "Vibrant natural cathedral texture",
+      "Rich deep-smoked tone",
+      "Extremely flexible for curved surfaces",
+      "Sustainably sourced old-growth look"
+    ]
+  },
+  {
+    "id": "lam-01",
+    "name": "Vanguard Tactile Oak Laminate",
+    "category": "Laminates",
+    "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=600",
+    "description": "Ultra-matte high pressure laminate (HPL) with an anti-fingerprint surface and tactile wood grain texture. Offers the realistic beauty of European oak with outstanding scratch and heat resistance.",
+    "specs": {
+      "Thickness": "1.0mm, 1.2mm",
+      "Surface Finish": "Tactile Matte Woodgrain",
+      "Technology": "Anti-fingerprint thermal healing",
+      "Scratch Resistance": "Grade 4+ High Resistance",
+      "Base Material": "Phenolic treated kraft papers",
+      "Origin": "Italy"
+    },
+    "features": [
+      "Zero-fingerprint advanced surface",
+      "Micro-scratch thermal healing capability",
+      "Antibacterial hygiene protection",
+      "High UV resistance against fading"
+    ]
+  },
+  {
+    "id": "mdf-01",
+    "name": "Ecoluxe High-Density MDF",
+    "category": "MDF Boards",
+    "image": "https://images.unsplash.com/photo-1507346122424-9f719067f08d?q=80&w=600",
+    "description": "Ultra-refined high-density fiberboard (HDF/MDF) constructed from fine softwood fibers. Provides incredibly smooth edges and surfaces, perfect for high-gloss lacquering and CNC profile milling.",
+    "specs": {
+      "Thickness": "8mm, 12mm, 15mm, 18mm, 25mm",
+      "Density": "780 - 820 kg/m³",
+      "Emission Standard": "Super E0 / CARB Phase 2",
+      "Core Color": "Natural Sand / Moisture-resistant Green option",
+      "Wood Species": "Radiata Pine",
+      "Origin": "New Zealand"
+    },
+    "features": [
+      "Ultra-smooth paintable surface",
+      "Consistent density profile across board",
+      "Excellent CNC cutting stability",
+      "Extremely low moisture swelling"
+    ]
+  },
+  {
+    "id": "blk-01",
+    "name": "Stark Solid Core Block Board",
+    "category": "Block Boards",
+    "image": "https://images.unsplash.com/photo-1448375240586-882707db888b?q=80&w=600",
+    "description": "Premium block board featuring a solid pine wood core sandwiched between cross-banded hardwood veneers. Exceptional bending strength and lightness makes it the preferred material for long shelves, doors, and wide tables.",
+    "specs": {
+      "Thickness": "19mm, 25mm",
+      "Core Construction": "Solid kiln-dried pine wood strips",
+      "Glue Type": "Melamine urea-formaldehyde",
+      "Density": "480 - 520 kg/m³",
+      "Wood Species": "Maritime Pine Core",
+      "Origin": "Sweden"
+    },
+    "features": [
+      "Outstanding dimensional stability",
+      "High load-bearing capacity without sagging",
+      "Lightweight compared to solid panels",
+      "Easy screwing and edge-banding"
+    ]
+  },
+  {
+    "id": "dec-01",
+    "name": "Linear Fluted Decorative Panel",
+    "category": "Decorative Panels",
+    "image": "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=600",
+    "description": "Luxurious fluted architectural wall panels designed to introduce texture, depth, and acoustical dampening to high-end residential and commercial lobbies. Finished in a gorgeous natural white oak.",
+    "specs": {
+      "Dimensions": "2400mm x 600mm x 21mm",
+      "Flute Width": "25mm wide slats",
+      "Felt Backing": "9mm recycled acoustic PET felt",
+      "Wood Species": "White Oak veneer on black MDF",
+      "Flame Retardant": "Class B1 available",
+      "Origin": "Denmark"
+    },
+    "features": [
+      "Acoustic sound absorption (NRC 0.85+)",
+      "Recycled PET felt backing",
+      "Modern Scandinavian minimalist style",
+      "Interlocking design for invisible joints"
+    ]
+  },
+  {
+    "id": "sol-01",
+    "name": "Bespoke Curved Architectural Slats",
+    "category": "Custom Wood Solutions",
+    "image": "https://images.unsplash.com/photo-1600121848594-d8644e57abab?q=80&w=600",
+    "description": "Tailor-made curved wood structures and custom ceiling installations engineered to match architectural drawing specifications. Prefabricated sections ensure rapid site assembly and stunning visual flow.",
+    "specs": {
+      "Customization": "Fully customizable curvature and size",
+      "Materials": "Flexible plywood backing / Solid wood slat inserts",
+      "Finish Options": "UV Lacquer, Oil finish, fire-retardant coat",
+      "Design Service": "CAD / 3D structural engineering support",
+      "Wood Species": "Teak, Ash, Walnut, Cherry",
+      "Origin": "Custom built in our master workshop"
+    },
+    "features": [
+      "Precision engineered CAD designs",
+      "Ready-to-assemble structural panels",
+      "Complies with commercial building fire codes",
+      "Created in collaboration with master craftsmen"
+    ]
+  }
+]
