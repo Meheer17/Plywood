@@ -22,6 +22,8 @@ interface ProductModalProps {
 
 export default function ProductModal({ product, onClose }: ProductModalProps) {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [errorMsg, setErrorMsg] = useState("");
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -31,14 +33,39 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
 
   if (!product) return null;
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
-      setFormData({ name: "", email: "", quantity: "", message: "" });
-      onClose();
-    }, 2000);
+    setLoading(true);
+    setErrorMsg("");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          ...formData,
+          productName: product.name,
+          productCategory: product.category,
+        }),
+      });
+
+      const data = await res.json();
+      if (res.ok) {
+        setSubmitted(true);
+        setFormData({ name: "", email: "", quantity: "", message: "" });
+        setTimeout(() => {
+          setSubmitted(false);
+          onClose();
+        }, 2000);
+      } else {
+        setErrorMsg(data.error || "Failed to submit request.");
+      }
+    } catch (err) {
+      setErrorMsg("An error occurred. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -177,11 +204,18 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     className="bg-white border border-walnut/20 px-3 py-2 text-xs focus:outline-none focus:border-gold w-full resize-none text-charcoal"
                   ></textarea>
+
+                  {errorMsg && (
+                    <p className="text-red-600 text-[10px] font-medium text-center bg-red-50 border border-red-200 p-2">{errorMsg}</p>
+                  )}
+
                   <button
                     type="submit"
-                    className="w-full bg-walnut hover:bg-gold text-white hover:text-walnut text-xs font-semibold uppercase tracking-widest py-3 flex items-center justify-center gap-2 transition-all duration-300 cursor-pointer"
+                    disabled={loading}
+                    className="w-full bg-walnut hover:bg-gold text-white hover:text-walnut text-xs font-semibold uppercase tracking-widest py-3 flex items-center justify-center gap-2 transition-all duration-300 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    Request Pricing & Specs <ArrowRight size={14} />
+                    {loading ? "Sending..." : "Request Pricing & Specs"} 
+                    {!loading && <ArrowRight size={14} />}
                   </button>
                 </form>
               )}

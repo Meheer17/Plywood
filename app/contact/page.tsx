@@ -7,27 +7,47 @@ import { Phone, Mail, MapPin, Clock, MessageSquare, ArrowRight, ShieldCheck } fr
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [errorMsg, setErrorMsg] = useState("");
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
     email: "",
-    requirement: "Premium Plywood",
+    requirement: "Premium (Waterproof) Plywood",
     message: ""
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
-      setFormData({
-        name: "",
-        phone: "",
-        email: "",
-        requirement: "Premium Plywood",
-        message: ""
+    setLoading(true);
+    setErrorMsg("");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
       });
-    }, 3000);
+
+      const data = await res.json();
+      if (res.ok) {
+        setSubmitted(true);
+        setFormData({
+          name: "",
+          phone: "",
+          email: "",
+          requirement: "Premium (Waterproof) Plywood",
+          message: ""
+        });
+      } else {
+        setErrorMsg(data.error || "Failed to submit request. Please try again.");
+      }
+    } catch (err) {
+      setErrorMsg("An unexpected error occurred. Please check your connection and try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   const showroomImages = [
@@ -40,23 +60,23 @@ export default function ContactPage() {
   const contactCards = [
     {
       title: "Call Us Direct",
-      desc: "Speak with a product engineer",
-      val: "+1 (503) 555-0142",
-      action: "tel:+15035550142",
+      desc: "Speak with a product specialist",
+      val: "+91 XXXXX XXXXX",
+      action: "tel:+919741767564",
       icon: <Phone className="text-gold" size={20} />
     },
     {
       title: "WhatsApp Chat",
       desc: "Instant specs & sample requests",
-      val: "+1 (503) 555-0199",
-      action: "https://wa.me/15035550199",
+      val: "+91 XXXXX XXXXX",
+      action: "https://wa.me/919741767564",
       icon: <MessageSquare className="text-gold" size={20} />
     },
     {
       title: "Email Inquiry",
       desc: "Submit project blueprints",
-      val: "estimates@sylvawood.com",
-      action: "mailto:estimates@sylvawood.com",
+      val: "info@rohiniplywood.com",
+      action: "mailto:info@rohiniplywood.com",
       icon: <Mail className="text-gold" size={20} />
     }
   ];
@@ -83,23 +103,24 @@ export default function ContactPage() {
           
           {/* Main Info */}
           <div className="space-y-6 bg-white p-8 border border-walnut/10 shadow-sm">
-            <h3 className="font-serif text-2xl font-light text-walnut">Sylva Head Office</h3>
+            <h3 className="font-serif text-2xl font-light text-walnut">Rohini Plywood & Deco Panel</h3>
+            <span className="text-[10px] text-gold font-bold uppercase tracking-widest block -mt-4">Authorized Zentree Distributor</span>
             <ul className="space-y-4 text-sm text-charcoal/70">
               <li className="flex items-start gap-4">
                 <MapPin size={18} className="text-gold shrink-0 mt-0.5" />
-                <span>102 Timber Plaza, Architectural District, Portland, OR 97201</span>
+                <span>Rohini Plywood and Deco Panel, Bangalore, Karnataka, India</span>
               </li>
               <li className="flex items-center gap-4">
                 <Clock size={18} className="text-gold shrink-0" />
-                <span>Mon – Fri: 8:00 AM – 6:00 PM (EST)</span>
+                <span>Mon – Sat: 9:00 AM – 7:00 PM (IST)</span>
               </li>
               <li className="flex items-center gap-4">
                 <Phone size={18} className="text-gold shrink-0" />
-                <span>+1 (503) 555-0142</span>
+                <span>+91 XXXXX XXXXX</span>
               </li>
               <li className="flex items-center gap-4">
                 <Mail size={18} className="text-gold shrink-0" />
-                <span>info@sylvawood.com</span>
+                <span>info@rohiniplywood.com</span>
               </li>
             </ul>
           </div>
@@ -149,7 +170,7 @@ export default function ContactPage() {
                 </div>
                 <h3 className="font-serif text-2xl text-walnut">Inquiry Sent Successfully</h3>
                 <p className="text-sm text-charcoal/60 max-w-sm">
-                  Thank you for contacting Sylva. An architectural account manager will review your project details and respond within 24 business hours.
+                  Thank you for contacting Rohini Plywood & Deco Panel. A sales representative will review your project details and respond within 24 business hours.
                 </p>
               </motion.div>
             ) : (
@@ -204,14 +225,11 @@ export default function ContactPage() {
                       onChange={(e) => setFormData({ ...formData, requirement: e.target.value })}
                       className="w-full bg-cream/50 border border-walnut/15 px-4 py-3 text-sm focus:outline-none focus:border-gold text-charcoal rounded-none"
                     >
-                      <option value="Premium Plywood">Premium Plywood</option>
-                      <option value="Marine Plywood">Marine Plywood</option>
-                      <option value="Veneers">Veneers</option>
-                      <option value="Laminates">Laminates</option>
-                      <option value="MDF Boards">MDF Boards</option>
+                      <option value="Premium (Waterproof) Plywood">Premium (Waterproof) Plywood</option>
+                      <option value="Commercial Plywood">Commercial Plywood</option>
                       <option value="Block Boards">Block Boards</option>
+                      <option value="Laminates">Laminates</option>
                       <option value="Decorative Panels">Decorative Panels</option>
-                      <option value="Custom Wood Solutions">Custom Wood Solutions</option>
                     </select>
                   </div>
                 </div>
@@ -228,12 +246,17 @@ export default function ContactPage() {
                   ></textarea>
                 </div>
 
+                {errorMsg && (
+                  <p className="text-red-600 text-xs font-medium bg-red-50 border border-red-200 p-3 text-center">{errorMsg}</p>
+                )}
+
                 <button
                   type="submit"
-                  className="w-full bg-walnut hover:bg-gold text-white hover:text-walnut text-xs font-semibold uppercase tracking-widest py-4 transition-all duration-300 flex items-center justify-center gap-2 group cursor-pointer"
+                  disabled={loading}
+                  className="w-full bg-walnut hover:bg-gold text-white hover:text-walnut text-xs font-semibold uppercase tracking-widest py-4 transition-all duration-300 flex items-center justify-center gap-2 group cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  Submit Sourcing Request
-                  <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+                  {loading ? "Sending Sourcing Request..." : "Submit Sourcing Request"}
+                  {!loading && <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />}
                 </button>
               </form>
             )}
@@ -292,7 +315,7 @@ export default function ContactPage() {
           allowFullScreen={true}
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-          title="Sylva Wood Showroom Location Map"
+          title="Rohini Plywood Showroom Location Map"
         ></iframe>
       </section>
 

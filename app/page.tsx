@@ -8,8 +8,20 @@ import {
   ArrowRight, ShieldCheck, Droplet, Bug, Leaf, Award, 
   ChevronLeft, ChevronRight, Star, Quote, Phone, HelpCircle 
 } from "lucide-react";
-import mockProducts from "@/app/data/products.json";
+import rawProducts from "@/app/data/products.json";
 import ProductModal from "@/app/components/ProductModal";
+
+interface Product {
+  id: string;
+  name: string;
+  category: string;
+  image: string;
+  description: string;
+  specs: Record<string, string>;
+  features: string[];
+}
+
+const mockProducts = rawProducts as unknown as Product[];
 
 // Reusable animated counter component using native IntersectionObserver (React 19 Safe)
 function AnimatedCounter({ value, duration = 1.5 }: { value: string; duration?: number }) {
@@ -70,14 +82,11 @@ export default function Home() {
   const [testimonialIndex, setTestimonialIndex] = useState(0);
 
   const categories = [
-    { name: "Premium Plywood", img: "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?q=80&w=600", desc: "Engineered for unmatched stability" },
-    { name: "Marine Plywood", img: "https://images.unsplash.com/photo-1541123437800-1bb1317bab8b?q=80&w=600", desc: "100% boiling-water waterproof panels" },
-    { name: "Veneers", img: "https://images.unsplash.com/photo-1533090161767-e6ffed986c88?q=80&w=600", desc: "Exquisite architectural wood slices" },
-    { name: "Laminates", img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=600", desc: "Ultra-matte anti-fingerprint surfaces" },
-    { name: "MDF Boards", img: "https://images.unsplash.com/photo-1507346122424-9f719067f08d?q=80&w=600", desc: "Refined high-density routing cores" },
-    { name: "Block Boards", img: "https://images.unsplash.com/photo-1448375240586-882707db888b?q=80&w=600", desc: "Strong kiln-dried timber frames" },
-    { name: "Decorative Panels", img: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=600", desc: "Acoustic fluted slats & panels" },
-    { name: "Custom Wood Solutions", img: "https://images.unsplash.com/photo-1600121848594-d8644e57abab?q=80&w=600", desc: "Precision pre-fabricated curves" }
+    { name: "Premium (Waterproof) Plywood", img: "/categories/premium_waterproof_plywood.jpg", desc: "100% boiling-water waterproof & termite-proof panels" },
+    { name: "Commercial Plywood", img: "/categories/commercial_plywood.jpg", desc: "Semi-calibrated & budget wardrobe panels" },
+    { name: "Block Boards", img: "/categories/block_boards.jpg", desc: "Strong kiln-dried timber frames" },
+    { name: "Laminates", img: "/categories/laminates.jpg", desc: "Premium textured style embodiment surfaces" },
+    { name: "Decorative Panels", img: "/categories/decorative_panels.jpg", desc: "Acoustic fluted slats & panels" }
   ];
 
   const whyChooseUs = [
@@ -91,19 +100,19 @@ export default function Home() {
 
   const testimonials = [
     {
-      text: "The quality of the smoked walnut veneers from Sylva is unmatched. We used them in our latest penthouse project, and the depth of natural wood grain exceeded our clients' expectations.",
+      text: "The quality of the smoked walnut veneers from Zentree's distributor is unmatched. We used them in our latest penthouse project, and the depth of natural wood grain exceeded our clients' expectations.",
       name: "Marcus Vance",
       role: "Principal Architect, Vance & Partners",
       avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=120"
     },
     {
-      text: "Sylva's BWP Marine Plywood has become our standard for coastal residences. Incredibly stable, zero internal voids, and absolute peace of mind during heavy seasonal rains.",
+      text: "Zentree's BWP Gold and Ultima waterproof plywood options have become our standard. Incredibly stable, zero internal voids, and absolute peace of mind during heavy seasonal rains.",
       name: "Elena Rostova",
       role: "Creative Director, Rostova Design Studio",
       avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=120"
     },
     {
-      text: "We commissioned Sylva to build custom curved timber baffles for a new concert hall lobby. Their engineering precision, scheduling, and craftsmanship were truly world-class.",
+      text: "We sourced custom curved timber baffles from Rohini Plywood and Deco Panel. Their Zentree engineering precision, scheduling, and craftsmanship were truly world-class.",
       name: "David Cho",
       role: "Senior Construction Manager, BuildCorp",
       avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=120"
@@ -119,7 +128,7 @@ export default function Home() {
     { name: "Ligne Roset", id: 6 }
   ];
 
-  const showcaseCategories = ["All", "Premium Plywood", "Veneers", "Laminates", "Decorative Panels"];
+  const showcaseCategories = ["All", "Premium (Waterproof) Plywood", "Commercial Plywood", "Block Boards", "Laminates", "Decorative Panels"];
 
   const filteredShowcase = selectedCategory === "All" 
     ? mockProducts.slice(0, 6) 
@@ -272,15 +281,15 @@ export default function Home() {
                 className="group block relative aspect-[4/5] overflow-hidden border border-walnut/10 bg-charcoal"
               >
                 {/* Image zoom on hover */}
-                <div className="absolute inset-0 z-0">
+                <div className="absolute inset-0 z-0 bg-cream">
                   <Image
                     src={cat.img}
                     alt={cat.name}
                     fill
                     sizes="(max-width: 768px) 100vw, 25vw"
-                    className="object-cover opacity-75 group-hover:scale-110 transition-transform duration-700"
+                    className="object-cover opacity-90 group-hover:scale-105 transition-transform duration-700"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-transparent to-transparent opacity-80" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/30 to-transparent" />
                 </div>
 
                 {/* Details overlay */}
@@ -308,7 +317,7 @@ export default function Home() {
           <div className="lg:w-1/3 space-y-6 lg:sticky lg:top-32">
             <span className="text-gold text-xs font-semibold tracking-widest uppercase">Uncompromising Standards</span>
             <h2 className="font-serif text-3xl md:text-5xl font-light tracking-wide text-white leading-tight">
-              Why Architects Trust Sylva
+              Why Architects Trust Zentree
             </h2>
             <p className="text-white/60 text-sm leading-relaxed font-light font-sans">
               From sustainable forestry sourcing to precise mechanical calibrating, our wood panels deliver stability, style, and structure for years to come.
@@ -456,14 +465,22 @@ export default function Home() {
             <div className="space-y-4">
               <span className="text-gold text-xs font-semibold tracking-widest uppercase">Craft & Heritage</span>
               <h2 className="font-serif text-3xl md:text-5xl font-light tracking-wide text-walnut leading-tight">
-                Formed by Nature, <br />Refined by Master Craftsmen
+                Rooted in generations <br />of expertise
               </h2>
               <div className="w-16 h-[1px] bg-gold" />
             </div>
 
-            <p className="text-sm text-charcoal/70 leading-relaxed font-sans font-light max-w-2xl">
-              Sylva Wood was established with a singular vision: to elevate wooden structural boards and design veneers into true architectural elements. Over the last quarter-century, we have partnered with award-winning architects and premium furniture labels to source, calibrate, and shape panels that become the primary character in high-end projects.
-            </p>
+            <div className="text-sm text-charcoal/70 leading-relaxed font-sans font-light max-w-2xl space-y-4">
+              <p>
+                Rooted in generations of expertise within the plywood and laminate trade, Zentree was conceived to bridge the gap between demand and dependable, high-quality interior solutions.
+              </p>
+              <p>
+                By establishing our ultra-modern manufacturing facility in close proximity to premium raw material sources, we ensure that every product we deliver meets the highest standards of excellence at a competitive value. Our vision is to transcend industry norms and redefine excellence through precision engineering and professional, expert-led execution.
+              </p>
+              <p>
+                At Zentree, we live by the philosophy that quality is not a singular act, but a habit—a standard that is rigorously upheld from the selection of our timber to the final stages of our manufacturing process.
+              </p>
+            </div>
 
             {/* Counter Grid */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 pt-6 border-t border-walnut/10">
@@ -494,6 +511,60 @@ export default function Home() {
             </div>
           </div>
 
+        </div>
+      </section>
+
+      {/* 5.5. AUTHORIZED DEALERS SECTION */}
+      <section className="py-24 px-6 md:px-12 bg-charcoal text-white w-full">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          <div className="lg:col-span-6 space-y-6">
+            <span className="text-gold text-xs font-semibold tracking-widest uppercase">Find Your Authorized Dealer</span>
+            <h2 className="font-serif text-3xl md:text-5xl font-light tracking-wide text-white leading-tight">
+              Authorized Sales Partner & Distributor
+            </h2>
+            <p className="text-white/60 text-sm leading-relaxed font-light max-w-xl">
+              Zentree products are available through our network of authorized sales experts. Our premier partner and distributor, Rohini Plywood and Deco Panel, provides professional sourcing, specification consultancy, and logistics support for residential and commercial interior projects.
+            </p>
+            <div className="pt-4">
+              <Link 
+                href="/contact"
+                className="px-6 py-3.5 bg-gold hover:bg-white text-walnut font-semibold text-xs tracking-widest uppercase transition-all duration-300 inline-flex items-center gap-2 group"
+              >
+                Inquire with Dealer <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </div>
+          </div>
+          
+          <div className="lg:col-span-6 bg-white/5 border border-white/10 p-8 sm:p-10 space-y-6">
+            <span className="text-gold text-xs font-semibold tracking-wider uppercase block">Featured Distributor</span>
+            <h3 className="font-serif text-2xl font-light text-white">Rohini Plywood & Deco Panel</h3>
+            
+            <div className="space-y-4 text-sm text-white/70">
+              <div className="flex items-start gap-3">
+                <span className="w-1.5 h-1.5 rounded-full bg-gold shrink-0 mt-2"></span>
+                <p><strong>Primary Sourcing Hub:</strong> Bangalore, Karnataka, India</p>
+              </div>
+              <div className="flex items-start gap-3">
+                <span className="w-1.5 h-1.5 rounded-full bg-gold shrink-0 mt-2"></span>
+                <p><strong>Offerings:</strong> Full Zentree plywood lines, custom architectural veneers, laminates, and decorative panels.</p>
+              </div>
+              <div className="flex items-start gap-3">
+                <span className="w-1.5 h-1.5 rounded-full bg-gold shrink-0 mt-2"></span>
+                <p><strong>Services:</strong> Wholesale supply, project estimation, size customization, and doorstep delivery.</p>
+              </div>
+            </div>
+            
+            <div className="pt-4 border-t border-white/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+              <div>
+                <span className="text-[10px] text-white/40 block uppercase tracking-widest">Direct Contact</span>
+                <span className="text-sm font-semibold text-gold font-sans">+91 XXXXX XXXXX</span>
+              </div>
+              <div>
+                <span className="text-[10px] text-white/40 block uppercase tracking-widest">Direct Email</span>
+                <span className="text-sm font-semibold text-gold font-sans">info@rohiniplywood.com</span>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -627,10 +698,10 @@ export default function Home() {
               Get a Quote <ArrowRight size={14} />
             </Link>
             <a
-              href="tel:+15035550142"
+              href="tel:+919741767564"
               className="w-full sm:w-auto px-8 py-4 bg-transparent border border-white/20 hover:border-gold hover:text-gold text-white font-semibold text-xs tracking-widest uppercase transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
             >
-              <Phone size={14} /> Call Showroom
+              <Phone size={14} /> Call Sales Partner
             </a>
           </div>
         </div>

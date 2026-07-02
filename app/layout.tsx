@@ -18,10 +18,10 @@ const sansFont = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Sylva Wood | Premium Architectural Plywood, Veneers & Wood Solutions",
-  description: "Sylva Wood crafts exceptional architectural plywood, veneers, laminates, and custom wood solutions trusted by premium architects, interior designers, and builders worldwide.",
-  keywords: ["premium plywood", "architectural veneers", "luxury woodwork", "marine plywood", "decorative panels", "MDF boards", "sustainable sourcing"],
-  authors: [{ name: "Sylva Wood" }],
+  title: "Zentree Plywood | Authorized Partner: Rohini Plywood & Deco Panel",
+  description: "Rohini Plywood and Deco Panel is an authorized sales partner of Zentree, offering premium BWP waterproof plywood, semi-calibrated commercial plywood, laminates, and veneers.",
+  keywords: ["Zentree Plywood", "Rohini Plywood and Deco Panel", "Zentree Ultima WP Ply", "Zentree Gold WP Ply", "commercial plywood", "waterproof plywood", "architectural veneers", "laminates", "MDF boards"],
+  authors: [{ name: "Rohini Plywood & Deco Panel" }],
 };
 
 export default function RootLayout({

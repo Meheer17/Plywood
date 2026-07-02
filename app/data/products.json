@@ -1,120 +1,78 @@
 [
   {
-    "id": "ply-01",
-    "name": "Aura Premium Birch Plywood",
-    "category": "Premium Plywood",
-    "image": "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?q=80&w=600",
-    "description": "Multi-layered Nordic Birch plywood offering outstanding strength, uniform surface finish, and minimal core voids. Perfect for bespoke high-end furniture, detailed joinery, and premium architectural millwork.",
+    "id": "ply-zt-ultima",
+    "name": "Zentree Ultima WP Ply",
+    "category": "Premium (Waterproof) Plywood",
+    "image": "/Zentree_Ultima.jpeg",
+    "description": "Boiling Water Proof (BWP) grade, high-density, calibrated plywood made from 100% Gurjan and Nilgiri (Eucalyptus). Borer and termite-proof, featuring equal thickness on all four sides, and includes a lifetime warranty.",
     "specs": {
-      "Thickness": "6mm, 12mm, 18mm, 24mm",
-      "Glue Type": "Phenolic resin / Exterior grade",
-      "Emission Grade": "E0 (Zero Formaldehyde)",
-      "Density": "680 - 700 kg/m³",
-      "Wood Species": "European White Birch",
-      "Origin": "Finland"
+      "Thickness": "6mm, 9mm, 12mm, 16mm, 19mm",
+      "Sizes": "8x4, 7x4",
+      "Grade": "BWP (Boiling Water Proof)",
+      "Wood Species": "100% Gurjan and Nilgiri (Eucalyptus)",
+      "Warranty": "Lifetime Warranty",
+      "Protection": "Borer & Termite Proof"
     },
     "features": [
-      "Superior screw holding strength",
-      "Perfect paint and veneer backing",
-      "No internal voids",
-      "FSC® and PEFC certified"
+      "100% Gurjan & Nilgiri core composition",
+      "Borer and termite-proof formulation",
+      "Calibrated for equal thickness on all four sides",
+      "Lifetime replacement warranty"
     ]
   },
   {
-    "id": "mar-01",
-    "name": "Nautica Marine Plywood (BWP)",
-    "category": "Marine Plywood",
-    "image": "https://images.unsplash.com/photo-1541123437800-1bb1317bab8b?q=80&w=600",
-    "description": "Boiling Water Proof (BWP) marine grade plywood engineered to withstand harsh marine environments and high humidity. Bonded with premium synthetic resins to prevent delamination.",
+    "id": "ply-zt-gold",
+    "name": "Zentree Gold WP Ply",
+    "category": "Premium (Waterproof) Plywood",
+    "image": "/Zentree_Gold.jpeg",
+    "description": "Premium waterproof plywood featuring a signature red core, engineered to be borer and termite-proof. Composed of a durable blend of Neem, Gurjan, and Nilgiri, it is highly recommended for both kitchen and wardrobe cabinets.",
     "specs": {
-      "Thickness": "9mm, 12mm, 16mm, 19mm",
-      "Bonding": "Phenol Formaldehyde (PF) synthetic resin",
-      "Treatment": "Vacuum-pressure preservative treated",
-      "Moisture Resistance": "100% Waterproof",
-      "Wood Species": "Select Hardwood",
-      "Origin": "Southeastern Asia"
+      "Thickness": "6mm to 19mm",
+      "Sizes": "8x4, 7x4",
+      "Grade": "Waterproof (WP) Grade",
+      "Wood Species": "Neem, Gurjan, and Nilgiri (Eucalyptus)",
+      "Core Type": "Distinctive Red Core",
+      "Protection": "Borer & Termite Proof"
     },
     "features": [
-      "Lifetime guarantee against delamination",
-      "Termite and borer resistant",
-      "Ideal for premium yacht interiors",
-      "Tested under high pressure and boiling water"
+      "Signature Red Core for quality assurance",
+      "100% borer and termite-proof protection",
+      "Optimized for high-moisture kitchen and wardrobe areas",
+      "Constructed from durable Neem, Gurjan & Nilgiri species"
     ]
   },
   {
-    "id": "ven-01",
-    "name": "Imperial Smoked Walnut Veneer",
-    "category": "Veneers",
-    "image": "https://images.unsplash.com/photo-1533090161767-e6ffed986c88?q=80&w=600",
-    "description": "Exquisite smoked walnut wood veneer offering deep chocolate tones and striking golden highlights. Sliced with high precision to preserve the rich, natural grain flow for high-end interior panelling.",
+    "id": "ply-zt-gurjan",
+    "name": "Zentree Gurjan Com Ply",
+    "category": "Commercial Plywood",
+    "image": "/Zentree_Gurjan.jpeg",
+    "description": "Semi-calibrated commercial plywood constructed using 100% premium Neem and Gurjan wood. Designed to offer full thickness strength, making it the perfect choice for wardrobes and bedroom cabinets.",
     "specs": {
-      "Thickness": "0.6mm (face veneer sheet)",
-      "Backing": "Fleece-backed / Raw paper sheet",
-      "Pattern": "Book matched / Quarter cut",
-      "Slicing Method": "Flat sliced",
-      "Wood Species": "American Black Walnut",
-      "Origin": "North America"
+      "Thickness": "6mm to 18mm",
+      "Sizes": "8x4, 7x4",
+      "Grade": "Commercial MR Grade",
+      "Wood Species": "100% Neem and Gurjan",
+      "Calibration": "Semi-Calibrated",
+      "Recommended For": "Wardrobes & Cabinets"
     },
     "features": [
-      "Vibrant natural cathedral texture",
-      "Rich deep-smoked tone",
-      "Extremely flexible for curved surfaces",
-      "Sustainably sourced old-growth look"
-    ]
-  },
-  {
-    "id": "lam-01",
-    "name": "Vanguard Tactile Oak Laminate",
-    "category": "Laminates",
-    "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=600",
-    "description": "Ultra-matte high pressure laminate (HPL) with an anti-fingerprint surface and tactile wood grain texture. Offers the realistic beauty of European oak with outstanding scratch and heat resistance.",
-    "specs": {
-      "Thickness": "1.0mm, 1.2mm",
-      "Surface Finish": "Tactile Matte Woodgrain",
-      "Technology": "Anti-fingerprint thermal healing",
-      "Scratch Resistance": "Grade 4+ High Resistance",
-      "Base Material": "Phenolic treated kraft papers",
-      "Origin": "Italy"
-    },
-    "features": [
-      "Zero-fingerprint advanced surface",
-      "Micro-scratch thermal healing capability",
-      "Antibacterial hygiene protection",
-      "High UV resistance against fading"
-    ]
-  },
-  {
-    "id": "mdf-01",
-    "name": "Ecoluxe High-Density MDF",
-    "category": "MDF Boards",
-    "image": "https://images.unsplash.com/photo-1507346122424-9f719067f08d?q=80&w=600",
-    "description": "Ultra-refined high-density fiberboard (HDF/MDF) constructed from fine softwood fibers. Provides incredibly smooth edges and surfaces, perfect for high-gloss lacquering and CNC profile milling.",
-    "specs": {
-      "Thickness": "8mm, 12mm, 15mm, 18mm, 25mm",
-      "Density": "780 - 820 kg/m³",
-      "Emission Standard": "Super E0 / CARB Phase 2",
-      "Core Color": "Natural Sand / Moisture-resistant Green option",
-      "Wood Species": "Radiata Pine",
-      "Origin": "New Zealand"
-    },
-    "features": [
-      "Ultra-smooth paintable surface",
-      "Consistent density profile across board",
-      "Excellent CNC cutting stability",
-      "Extremely low moisture swelling"
+      "100% Neem and Gurjan composition",
+      "Semi-calibrated for enhanced flatness",
+      "Full thickness profile for superior load-bearing",
+      "Ideal for premium wardrobes"
     ]
   },
   {
     "id": "blk-01",
-    "name": "Stark Solid Core Block Board",
+    "name": "Zentree Solid Core Block Board",
     "category": "Block Boards",
-    "image": "https://images.unsplash.com/photo-1448375240586-882707db888b?q=80&w=600",
+    "image": "/Zentree_Blockboard.jpeg",
     "description": "Premium block board featuring a solid pine wood core sandwiched between cross-banded hardwood veneers. Exceptional bending strength and lightness makes it the preferred material for long shelves, doors, and wide tables.",
     "specs": {
       "Thickness": "19mm, 25mm",
       "Core Construction": "Solid kiln-dried pine wood strips",
       "Glue Type": "Melamine urea-formaldehyde",
-      "Density": "480 - 520 kg/m³",
+      "Density": "480 - 520 kg/m\u00b3",
       "Wood Species": "Maritime Pine Core",
       "Origin": "Sweden"
     },
@@ -123,6 +81,510 @@
       "High load-bearing capacity without sagging",
       "Lightweight compared to solid panels",
       "Easy screwing and edge-banding"
+    ]
+  },
+  {
+    "id": "lam-zt-2198",
+    "name": "Zentree 2198 | Cotton Fabric Grey",
+    "category": "Laminates",
+    "image": "/laminates/2198_cotton_fabric_grey.jpg",
+    "description": "A premium fabric-textured laminate emulating the clean, refined texture of woven grey cotton, bringing warmth and elegance to modern spaces.",
+    "specs": {
+      "Thickness": "1.0mm",
+      "Surface Finish": "Fabric Texture",
+      "Series": "Fabric Series",
+      "Code": "2198",
+      "Brand": "Zentree",
+      "Origin": "India"
+    },
+    "features": [
+      "Sophisticated fabric tactile texture",
+      "High resistance to scratches & impact",
+      "Uniform pattern repeat and coloration",
+      "Perfect for premium wardrobes & panels"
+    ]
+  },
+  {
+    "id": "lam-zt-5119",
+    "name": "Zentree 5119 | Dotted Fabric",
+    "category": "Laminates",
+    "image": "/laminates/5119_dotted_fabric.jpg",
+    "description": "Featuring a subtle, structured dotted weave motif that offers a pleasant tactile experience and a clean contemporary look.",
+    "specs": {
+      "Thickness": "1.0mm",
+      "Surface Finish": "Fabric Texture",
+      "Series": "Fabric Series",
+      "Code": "5119",
+      "Brand": "Zentree",
+      "Origin": "India"
+    },
+    "features": [
+      "Subtle micro-dotted weave design",
+      "High resistance to scratches & impact",
+      "Uniform pattern repeat and coloration",
+      "Perfect for premium wardrobes & panels"
+    ]
+  },
+  {
+    "id": "lam-zt-2205",
+    "name": "Zentree 2205 | Linen Beige",
+    "category": "Laminates",
+    "image": "/laminates/2205_linen_beige.jpg",
+    "description": "A classic beige linen texture offering natural warmth and organic texture, ideal for minimalist bedrooms and wardrobes.",
+    "specs": {
+      "Thickness": "1.0mm",
+      "Surface Finish": "Fabric Texture",
+      "Series": "Fabric Series",
+      "Code": "2205",
+      "Brand": "Zentree",
+      "Origin": "India"
+    },
+    "features": [
+      "Organic linen weave layout",
+      "High resistance to scratches & impact",
+      "Uniform pattern repeat and coloration",
+      "Perfect for premium wardrobes & panels"
+    ]
+  },
+  {
+    "id": "lam-zt-5113",
+    "name": "Zentree 5113 | Classic Fabric Grey",
+    "category": "Laminates",
+    "image": "/laminates/5113_classic_fabric_grey.jpg",
+    "description": "A timeless classic grey fabric finish designed to provide a textured backdrop for study tables and modern living units.",
+    "specs": {
+      "Thickness": "1.0mm",
+      "Surface Finish": "Fabric Texture",
+      "Series": "Fabric Series",
+      "Code": "5113",
+      "Brand": "Zentree",
+      "Origin": "India"
+    },
+    "features": [
+      "Deep classic grey textile tone",
+      "High resistance to scratches & impact",
+      "Uniform pattern repeat and coloration",
+      "Perfect for premium wardrobes & panels"
+    ]
+  },
+  {
+    "id": "lam-zt-3001",
+    "name": "Zentree 3001 | Cambric Light Grey",
+    "category": "Laminates",
+    "image": "/laminates/3001_cambric_light_grey.jpg",
+    "description": "A light grey cambric weave texture laminate, bringing a sophisticated textile look to modular panels.",
+    "specs": {
+      "Thickness": "1.0mm",
+      "Surface Finish": "Fabric Texture",
+      "Series": "Fabric Series",
+      "Code": "3001",
+      "Brand": "Zentree",
+      "Origin": "India"
+    },
+    "features": [
+      "Refined cambric light grey texture",
+      "High resistance to scratches & impact",
+      "Uniform pattern repeat and coloration",
+      "Perfect for premium wardrobes & panels"
+    ]
+  },
+  {
+    "id": "lam-zt-8824",
+    "name": "Zentree 8824 | Gauze Fab",
+    "category": "Laminates",
+    "image": "/laminates/8824_gauze_fab.jpg",
+    "description": "A fine gauze-like texture with a subtle cross-hatched pattern, perfect for adding visual depth to cabinet interiors.",
+    "specs": {
+      "Thickness": "1.0mm",
+      "Surface Finish": "Fabric Texture",
+      "Series": "Fabric Series",
+      "Code": "8824",
+      "Brand": "Zentree",
+      "Origin": "India"
+    },
+    "features": [
+      "Delicate gauze fiber weave",
+      "High resistance to scratches & impact",
+      "Uniform pattern repeat and coloration",
+      "Perfect for premium wardrobes & panels"
+    ]
+  },
+  {
+    "id": "lam-zt-8825",
+    "name": "Zentree 8825 | Woven Fab",
+    "category": "Laminates",
+    "image": "/laminates/8825_woven_fab.jpg",
+    "description": "An organic woven texture with soft beige-grey undertones, adding a soft tactile dimension to furniture design.",
+    "specs": {
+      "Thickness": "1.0mm",
+      "Surface Finish": "Fabric Texture",
+      "Series": "Fabric Series",
+      "Code": "8825",
+      "Brand": "Zentree",
+      "Origin": "India"
+    },
+    "features": [
+      "Tactile woven thread simulation",
+      "High resistance to scratches & impact",
+      "Uniform pattern repeat and coloration",
+      "Perfect for premium wardrobes & panels"
+    ]
+  },
+  {
+    "id": "lam-zt-8826",
+    "name": "Zentree 8826 | Woven Fab",
+    "category": "Laminates",
+    "image": "/laminates/8826_woven_fab.jpg",
+    "description": "A rich woven fabric design with warm ivory undertones, offering a premium and inviting tactile feel.",
+    "specs": {
+      "Thickness": "1.0mm",
+      "Surface Finish": "Fabric Texture",
+      "Series": "Fabric Series",
+      "Code": "8826",
+      "Brand": "Zentree",
+      "Origin": "India"
+    },
+    "features": [
+      "Warm ivory woven fabric look",
+      "High resistance to scratches & impact",
+      "Uniform pattern repeat and coloration",
+      "Perfect for premium wardrobes & panels"
+    ]
+  },
+  {
+    "id": "lam-zt-8829",
+    "name": "Zentree 8829 | Gauze Fab",
+    "category": "Laminates",
+    "image": "/laminates/8829_gauze_fab.jpg",
+    "description": "A delicate, slightly darker gauze texture offering a perfect balance between tactile interest and minimalist styling.",
+    "specs": {
+      "Thickness": "1.0mm",
+      "Surface Finish": "Fabric Texture",
+      "Series": "Fabric Series",
+      "Code": "8829",
+      "Brand": "Zentree",
+      "Origin": "India"
+    },
+    "features": [
+      "Soft gauze fabric in neutral grey",
+      "High resistance to scratches & impact",
+      "Uniform pattern repeat and coloration",
+      "Perfect for premium wardrobes & panels"
+    ]
+  },
+  {
+    "id": "lam-zt-5104",
+    "name": "Zentree 5104 | Cusino",
+    "category": "Laminates",
+    "image": "/laminates/5104_cusino.jpg",
+    "description": "A highly sophisticated solid fabric design with a soft, brushed feel, creating an atmosphere of cozy luxury.",
+    "specs": {
+      "Thickness": "1.0mm",
+      "Surface Finish": "Fabric Texture",
+      "Series": "Fabric Series",
+      "Code": "5104",
+      "Brand": "Zentree",
+      "Origin": "India"
+    },
+    "features": [
+      "Luxury Cusino soft fabric weave",
+      "High resistance to scratches & impact",
+      "Uniform pattern repeat and coloration",
+      "Perfect for premium wardrobes & panels"
+    ]
+  },
+  {
+    "id": "lam-zt-8874",
+    "name": "Zentree 8874 | Chiffon Fab",
+    "category": "Laminates",
+    "image": "/laminates/8874_chiffon_fab.jpg",
+    "description": "A light, airy chiffon-style fabric texture in an elegant neutral tone, perfect for luxury dresser units.",
+    "specs": {
+      "Thickness": "1.0mm",
+      "Surface Finish": "Fabric Texture",
+      "Series": "Fabric Series",
+      "Code": "8874",
+      "Brand": "Zentree",
+      "Origin": "India"
+    },
+    "features": [
+      "Elegant Chiffon crossweave",
+      "High resistance to scratches & impact",
+      "Uniform pattern repeat and coloration",
+      "Perfect for premium wardrobes & panels"
+    ]
+  },
+  {
+    "id": "lam-zt-8875",
+    "name": "Zentree 8875 | Chiffon Fab",
+    "category": "Laminates",
+    "image": "/laminates/8875_chiffon_fab.jpg",
+    "description": "A neutral grey chiffon-textured laminate, providing a sleek, sophisticated feel to cabinet doors.",
+    "specs": {
+      "Thickness": "1.0mm",
+      "Surface Finish": "Fabric Texture",
+      "Series": "Fabric Series",
+      "Code": "8875",
+      "Brand": "Zentree",
+      "Origin": "India"
+    },
+    "features": [
+      "Sophisticated chiffon-style surface",
+      "High resistance to scratches & impact",
+      "Uniform pattern repeat and coloration",
+      "Perfect for premium wardrobes & panels"
+    ]
+  },
+  {
+    "id": "lam-zt-2124",
+    "name": "Zentree 2124 | Virola Wood Brown",
+    "category": "Laminates",
+    "image": "/laminates/2124_virola_wood_brown.jpg",
+    "description": "A deep Virola wood design with rich brown vertical grains, adding classic elegance and structural look to wall panelling.",
+    "specs": {
+      "Thickness": "1.0mm",
+      "Surface Finish": "Natural Woodgrain",
+      "Series": "Wood & Stone Series",
+      "Code": "2124",
+      "Brand": "Zentree",
+      "Origin": "India"
+    },
+    "features": [
+      "Realistic woodgrain texture emulation",
+      "Triple-action wear-resistant overlay",
+      "Antibacterial & hygienic surface technology",
+      "Excellent for kitchen cabinets & table tops"
+    ]
+  },
+  {
+    "id": "lam-zt-2101",
+    "name": "Zentree 2101 | Precious Beech",
+    "category": "Laminates",
+    "image": "/laminates/2101_precious_beech.jpg",
+    "description": "A warm, natural light beech woodgrain laminate with soft golden tones, ideal for office furniture and school desks.",
+    "specs": {
+      "Thickness": "1.0mm",
+      "Surface Finish": "Natural Woodgrain",
+      "Series": "Wood & Stone Series",
+      "Code": "2101",
+      "Brand": "Zentree",
+      "Origin": "India"
+    },
+    "features": [
+      "Realistic light beech woodgrain",
+      "Triple-action wear-resistant overlay",
+      "Antibacterial & hygienic surface technology",
+      "Excellent for kitchen cabinets & table tops"
+    ]
+  },
+  {
+    "id": "lam-zt-2102",
+    "name": "Zentree 2102 | Naina Teak Brown",
+    "category": "Laminates",
+    "image": "/laminates/2102_naina_teak_brown.jpg",
+    "description": "A premium teak wood reproduction with striking brown grains, showcasing the classic heritage of Indian Teakwood.",
+    "specs": {
+      "Thickness": "1.0mm",
+      "Surface Finish": "Natural Woodgrain",
+      "Series": "Wood & Stone Series",
+      "Code": "2102",
+      "Brand": "Zentree",
+      "Origin": "India"
+    },
+    "features": [
+      "Heritage Teak grain texture",
+      "Triple-action wear-resistant overlay",
+      "Antibacterial & hygienic surface technology",
+      "Excellent for kitchen cabinets & table tops"
+    ]
+  },
+  {
+    "id": "lam-zt-2115",
+    "name": "Zentree 2115 | Hilandpine (Yellow)",
+    "category": "Laminates",
+    "image": "/laminates/2115_hilandpine_yellow.jpg",
+    "description": "A vibrant, warm yellow-pine grain laminate featuring detailed growth rings and knot details for rustic spaces.",
+    "specs": {
+      "Thickness": "1.0mm",
+      "Surface Finish": "Natural Woodgrain",
+      "Series": "Wood & Stone Series",
+      "Code": "2115",
+      "Brand": "Zentree",
+      "Origin": "India"
+    },
+    "features": [
+      "Yellow-pine rustic grain emulation",
+      "Triple-action wear-resistant overlay",
+      "Antibacterial & hygienic surface technology",
+      "Excellent for kitchen cabinets & table tops"
+    ]
+  },
+  {
+    "id": "lam-zt-2106",
+    "name": "Zentree 2106 | ST Wenge",
+    "category": "Laminates",
+    "image": "/laminates/2106_st_wenge.jpg",
+    "description": "A dark, dramatic Wenge wood texture with deep chocolate bands, perfect for high-contrast modern styling.",
+    "specs": {
+      "Thickness": "1.0mm",
+      "Surface Finish": "Natural Woodgrain",
+      "Series": "Wood & Stone Series",
+      "Code": "2106",
+      "Brand": "Zentree",
+      "Origin": "India"
+    },
+    "features": [
+      "Deep dark chocolate Wenge style",
+      "Triple-action wear-resistant overlay",
+      "Antibacterial & hygienic surface technology",
+      "Excellent for kitchen cabinets & table tops"
+    ]
+  },
+  {
+    "id": "lam-zt-7401",
+    "name": "Zentree 7401 | Sand Stone Grey",
+    "category": "Laminates",
+    "image": "/laminates/7401_sand_stone_grey.jpg",
+    "description": "A realistic sand-stone texture laminate with concrete grey tones, bringing an industrial, architectural edge to tops and walls.",
+    "specs": {
+      "Thickness": "1.0mm",
+      "Surface Finish": "Stone Suede",
+      "Series": "Wood & Stone Series",
+      "Code": "7401",
+      "Brand": "Zentree",
+      "Origin": "India"
+    },
+    "features": [
+      "Industrial grey sand stone texture",
+      "Triple-action wear-resistant overlay",
+      "Antibacterial & hygienic surface technology",
+      "Excellent for kitchen cabinets & table tops"
+    ]
+  },
+  {
+    "id": "lam-zt-7101",
+    "name": "Zentree 7101 | White",
+    "category": "Laminates",
+    "image": "/laminates/7101_white.jpg",
+    "description": "A clean, bright solid white laminate in a premium matte finish, providing a sterile, high-contrast base for modern layouts.",
+    "specs": {
+      "Thickness": "1.0mm",
+      "Surface Finish": "Suede Matte",
+      "Series": "Solid Colour Series",
+      "Code": "7101",
+      "Brand": "Zentree",
+      "Origin": "India"
+    },
+    "features": [
+      "Smooth, uniform matte white colour",
+      "Fingerprint & smudge resistant surface",
+      "High resistance to fading under UV exposure",
+      "Ideal for modern minimalist modular kitchens"
+    ]
+  },
+  {
+    "id": "lam-zt-7102",
+    "name": "Zentree 7102 | Off White",
+    "category": "Laminates",
+    "image": "/laminates/7102_off_white.jpg",
+    "description": "A soft off-white solid laminate, offering a gentler, warmer white option for kitchen cabinets.",
+    "specs": {
+      "Thickness": "1.0mm",
+      "Surface Finish": "Suede Matte",
+      "Series": "Solid Colour Series",
+      "Code": "7102",
+      "Brand": "Zentree",
+      "Origin": "India"
+    },
+    "features": [
+      "Gentle soft off-white colour tone",
+      "Fingerprint & smudge resistant surface",
+      "High resistance to fading under UV exposure",
+      "Ideal for modern minimalist modular kitchens"
+    ]
+  },
+  {
+    "id": "lam-zt-7103",
+    "name": "Zentree 7103 | Light Grey",
+    "category": "Laminates",
+    "image": "/laminates/7103_light_grey.jpg",
+    "description": "An elegant neutral light grey solid colour, providing a modern, balanced look for contemporary storage units.",
+    "specs": {
+      "Thickness": "1.0mm",
+      "Surface Finish": "Suede Matte",
+      "Series": "Solid Colour Series",
+      "Code": "7103",
+      "Brand": "Zentree",
+      "Origin": "India"
+    },
+    "features": [
+      "Neutral light grey suede matte",
+      "Fingerprint & smudge resistant surface",
+      "High resistance to fading under UV exposure",
+      "Ideal for modern minimalist modular kitchens"
+    ]
+  },
+  {
+    "id": "lam-zt-7104",
+    "name": "Zentree 7104 | Gothic Grey",
+    "category": "Laminates",
+    "image": "/laminates/7104_gothic_grey.jpg",
+    "description": "A medium-toned gothic grey solid laminate, perfect for sleek modular kitchen shutters and credenzas.",
+    "specs": {
+      "Thickness": "1.0mm",
+      "Surface Finish": "Suede Matte",
+      "Series": "Solid Colour Series",
+      "Code": "7104",
+      "Brand": "Zentree",
+      "Origin": "India"
+    },
+    "features": [
+      "Medium gothic grey matte color",
+      "Fingerprint & smudge resistant surface",
+      "High resistance to fading under UV exposure",
+      "Ideal for modern minimalist modular kitchens"
+    ]
+  },
+  {
+    "id": "lam-zt-7105",
+    "name": "Zentree 7105 | Dark Grey",
+    "category": "Laminates",
+    "image": "/laminates/7105_dark_grey.jpg",
+    "description": "A bold, deep charcoal solid laminate in matte, adding a masculine, sophisticated touch to high-end designs.",
+    "specs": {
+      "Thickness": "1.0mm",
+      "Surface Finish": "Suede Matte",
+      "Series": "Solid Colour Series",
+      "Code": "7105",
+      "Brand": "Zentree",
+      "Origin": "India"
+    },
+    "features": [
+      "Deep bold charcoal dark grey matte",
+      "Fingerprint & smudge resistant surface",
+      "High resistance to fading under UV exposure",
+      "Ideal for modern minimalist modular kitchens"
+    ]
+  },
+  {
+    "id": "lam-zt-7107",
+    "name": "Zentree 7107 | Ivory",
+    "category": "Laminates",
+    "image": "/laminates/7107_ivory.jpg",
+    "description": "A classic, warm ivory cream solid colour, bringing a soft, traditional brightness to classic wardrobes.",
+    "specs": {
+      "Thickness": "1.0mm",
+      "Surface Finish": "Suede Matte",
+      "Series": "Solid Colour Series",
+      "Code": "7107",
+      "Brand": "Zentree",
+      "Origin": "India"
+    },
+    "features": [
+      "Warm classic ivory cream shade",
+      "Fingerprint & smudge resistant surface",
+      "High resistance to fading under UV exposure",
+      "Ideal for modern minimalist modular kitchens"
     ]
   },
   {
@@ -144,27 +606,6 @@
       "Recycled PET felt backing",
       "Modern Scandinavian minimalist style",
       "Interlocking design for invisible joints"
-    ]
-  },
-  {
-    "id": "sol-01",
-    "name": "Bespoke Curved Architectural Slats",
-    "category": "Custom Wood Solutions",
-    "image": "https://images.unsplash.com/photo-1600121848594-d8644e57abab?q=80&w=600",
-    "description": "Tailor-made curved wood structures and custom ceiling installations engineered to match architectural drawing specifications. Prefabricated sections ensure rapid site assembly and stunning visual flow.",
-    "specs": {
-      "Customization": "Fully customizable curvature and size",
-      "Materials": "Flexible plywood backing / Solid wood slat inserts",
-      "Finish Options": "UV Lacquer, Oil finish, fire-retardant coat",
-      "Design Service": "CAD / 3D structural engineering support",
-      "Wood Species": "Teak, Ash, Walnut, Cherry",
-      "Origin": "Custom built in our master workshop"
-    },
-    "features": [
-      "Precision engineered CAD designs",
-      "Ready-to-assemble structural panels",
-      "Complies with commercial building fire codes",
-      "Created in collaboration with master craftsmen"
     ]
   }
 ]

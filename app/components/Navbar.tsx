@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ArrowRight } from "lucide-react";
@@ -64,11 +65,25 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2 group">
-          <span className={`font-serif text-2xl md:text-3xl font-light tracking-[0.2em] transition-colors duration-300 group-hover:text-gold ${logoColorClass}`}>
-            SYLVA
-          </span>
-          <span className="w-1.5 h-1.5 rounded-full bg-gold animate-pulse"></span>
+        <Link href="/" className="flex items-center gap-2.5 group">
+          <div className="relative h-8 w-8 shrink-0">
+            <Image
+              src="/zentree_logo.png"
+              alt="Zentree Logo Mark"
+              fill
+              sizes="32px"
+              className="object-contain"
+            />
+          </div>
+          <div className="relative h-5 w-24 shrink-0 hidden sm:block">
+            <Image
+              src="/zentree_text_logo.png"
+              alt="Zentree Text Logo"
+              fill
+              sizes="96px"
+              className="object-contain brightness-0 invert"
+            />
+          </div>
         </Link>
 
         {/* Desktop Nav Links */}

@@ -5,8 +5,20 @@ import { useSearchParams } from "next/navigation";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Search, SlidersHorizontal, ArrowRight } from "lucide-react";
-import mockProducts from "@/app/data/products.json";
+import rawProducts from "@/app/data/products.json";
 import ProductModal from "@/app/components/ProductModal";
+
+interface Product {
+  id: string;
+  name: string;
+  category: string;
+  image: string;
+  description: string;
+  specs: Record<string, string>;
+  features: string[];
+}
+
+const mockProducts = rawProducts as unknown as Product[];
 
 function ProductsContent() {
   const searchParams = useSearchParams();
@@ -26,14 +38,11 @@ function ProductsContent() {
 
   const categories = [
     "All",
-    "Premium Plywood",
-    "Marine Plywood",
-    "Veneers",
-    "Laminates",
-    "MDF Boards",
+    "Premium (Waterproof) Plywood",
+    "Commercial Plywood",
     "Block Boards",
-    "Decorative Panels",
-    "Custom Wood Solutions"
+    "Laminates",
+    "Decorative Panels"
   ];
 
   // Filtering logic
