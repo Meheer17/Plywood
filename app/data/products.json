@@ -53,13 +53,36 @@
       "Grade": "Commercial MR Grade",
       "Wood Species": "100% Neem and Gurjan",
       "Calibration": "Semi-Calibrated",
-      "Recommended For": "Wardrobes & Cabinets"
+      "Recommended For": "Wardrobes & Cabinets",
+      "Origin": "India"
     },
     "features": [
       "100% Neem and Gurjan composition",
       "Semi-calibrated for enhanced flatness",
       "Full thickness profile for superior load-bearing",
       "Ideal for premium wardrobes"
+    ]
+  },
+  {
+    "id": "ply-zt-project-com",
+    "name": "Zentree Project Com Ply",
+    "category": "Commercial Plywood",
+    "image": "/Zentree_Gurjan.jpeg",
+    "description": "This plywood is a budget option constructed using a mix of Neem and other species, featuring full thickness. It is intended for wardrobe applications and is available in thicknesses from 6mm to 18mm. It comes in 8x4 and 7x4 sheet sizes.",
+    "specs": {
+      "Thickness": "6mm to 18mm",
+      "Sizes": "8x4, 7x4",
+      "Grade": "Commercial Budget Grade",
+      "Wood Species": "Mix of Neem and other species",
+      "Profile": "Full Thickness",
+      "Recommended For": "Wardrobe Applications",
+      "Origin": "India"
+    },
+    "features": [
+      "Constructed using a mix of Neem & other species",
+      "Full thickness profile for budget cabinets",
+      "Highly cost-effective wardrobe solution",
+      "Available in standard 8x4 and 7x4 sheet sizes"
     ]
   },
   {

@@ -265,11 +265,11 @@ export default function ContactPage() {
       </section>
 
       {/* Showroom Gallery Section */}
-      <section className="bg-charcoal text-white py-24 px-6 md:px-12 w-full">
+      <section className="bg-white text-charcoal py-24 px-6 md:px-12 w-full border-t border-b border-walnut/10">
         <div className="max-w-7xl mx-auto space-y-16">
           <div className="flex flex-col items-center text-center gap-4">
             <span className="text-gold text-xs font-semibold tracking-widest uppercase">Luxury spaces</span>
-            <h2 className="font-serif text-3xl md:text-5xl font-light tracking-wide text-white">
+            <h2 className="font-serif text-3xl md:text-5xl font-light tracking-wide text-walnut">
               Experience the Showroom
             </h2>
             <div className="w-16 h-[1px] bg-gold mt-2" />
@@ -283,7 +283,7 @@ export default function ContactPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className="group relative aspect-[4/5] overflow-hidden border border-white/5 bg-walnut/10"
+                className="group relative aspect-[4/5] overflow-hidden border border-walnut/10 bg-walnut/10"
               >
                 <Image
                   src={img.url}
@@ -292,7 +292,7 @@ export default function ContactPage() {
                   sizes="(max-width: 768px) 100vw, 25vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-700 opacity-80"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-transparent to-transparent opacity-80" />
+                <div className="absolute inset-0 bg-gradient-to-t from-walnut/90 via-walnut/30 to-transparent opacity-80" />
                 <div className="absolute bottom-6 left-6 right-6 text-left">
                   <h4 className="font-serif text-base font-light text-white tracking-wide">{img.title}</h4>
                   <span className="text-[10px] text-gold tracking-widest uppercase font-semibold mt-1 block opacity-0 group-hover:opacity-100 transition-opacity duration-300">

@@ -311,21 +311,21 @@ export default function Home() {
       </section>
 
       {/* 3. WHY CHOOSE US SECTION */}
-      <section className="bg-charcoal text-white py-24 px-6 md:px-12 w-full relative">
+      <section className="bg-white text-charcoal border-y border-walnut/10 py-24 px-6 md:px-12 w-full relative">
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-16 items-start">
           
           <div className="lg:w-1/3 space-y-6 lg:sticky lg:top-32">
             <span className="text-gold text-xs font-semibold tracking-widest uppercase">Uncompromising Standards</span>
-            <h2 className="font-serif text-3xl md:text-5xl font-light tracking-wide text-white leading-tight">
+            <h2 className="font-serif text-3xl md:text-5xl font-light tracking-wide text-walnut leading-tight">
               Why Architects Trust Zentree
             </h2>
-            <p className="text-white/60 text-sm leading-relaxed font-light font-sans">
+            <p className="text-charcoal/70 text-sm leading-relaxed font-light font-sans">
               From sustainable forestry sourcing to precise mechanical calibrating, our wood panels deliver stability, style, and structure for years to come.
             </p>
             <div className="pt-4">
               <Link 
                 href="/contact"
-                className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-gold hover:text-white transition-colors duration-300"
+                className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-gold hover:text-walnut transition-colors duration-300"
               >
                 Learn About Our Standards <ArrowRight size={14} />
               </Link>
@@ -342,13 +342,13 @@ export default function Home() {
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
                 className="space-y-4 border-l border-gold/20 pl-6 py-1"
               >
-                <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center">
+                <div className="w-10 h-10 rounded-full bg-walnut/5 flex items-center justify-center">
                   {item.icon}
                 </div>
-                <h3 className="font-serif text-lg font-light tracking-wide text-white">
+                <h3 className="font-serif text-lg font-light tracking-wide text-walnut">
                   {item.title}
                 </h3>
-                <p className="text-white/50 text-xs leading-relaxed font-sans font-light">
+                <p className="text-charcoal/60 text-xs leading-relaxed font-sans font-light">
                   {item.desc}
                 </p>
               </motion.div>
@@ -515,31 +515,31 @@ export default function Home() {
       </section>
 
       {/* 5.5. AUTHORIZED DEALERS SECTION */}
-      <section className="py-24 px-6 md:px-12 bg-charcoal text-white w-full">
+      <section className="py-24 px-6 md:px-12 bg-walnut/5 text-charcoal w-full">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           <div className="lg:col-span-6 space-y-6">
             <span className="text-gold text-xs font-semibold tracking-widest uppercase">Find Your Authorized Dealer</span>
-            <h2 className="font-serif text-3xl md:text-5xl font-light tracking-wide text-white leading-tight">
+            <h2 className="font-serif text-3xl md:text-5xl font-light tracking-wide text-walnut leading-tight">
               Authorized Sales Partner & Distributor
             </h2>
-            <p className="text-white/60 text-sm leading-relaxed font-light max-w-xl">
+            <p className="text-charcoal/70 text-sm leading-relaxed font-light max-w-xl">
               Zentree products are available through our network of authorized sales experts. Our premier partner and distributor, Rohini Plywood and Deco Panel, provides professional sourcing, specification consultancy, and logistics support for residential and commercial interior projects.
             </p>
             <div className="pt-4">
               <Link 
                 href="/contact"
-                className="px-6 py-3.5 bg-gold hover:bg-white text-walnut font-semibold text-xs tracking-widest uppercase transition-all duration-300 inline-flex items-center gap-2 group"
+                className="px-6 py-3.5 bg-gold hover:bg-walnut text-walnut hover:text-white font-semibold text-xs tracking-widest uppercase transition-all duration-300 inline-flex items-center gap-2 group"
               >
                 Inquire with Dealer <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
           </div>
           
-          <div className="lg:col-span-6 bg-white/5 border border-white/10 p-8 sm:p-10 space-y-6">
+          <div className="lg:col-span-6 bg-white border border-walnut/15 p-8 sm:p-10 space-y-6 shadow-sm">
             <span className="text-gold text-xs font-semibold tracking-wider uppercase block">Featured Distributor</span>
-            <h3 className="font-serif text-2xl font-light text-white">Rohini Plywood & Deco Panel</h3>
+            <h3 className="font-serif text-2xl font-light text-walnut">Rohini Plywood & Deco Panel</h3>
             
-            <div className="space-y-4 text-sm text-white/70">
+            <div className="space-y-4 text-sm text-charcoal/70">
               <div className="flex items-start gap-3">
                 <span className="w-1.5 h-1.5 rounded-full bg-gold shrink-0 mt-2"></span>
                 <p><strong>Primary Sourcing Hub:</strong> Bangalore, Karnataka, India</p>
@@ -554,14 +554,14 @@ export default function Home() {
               </div>
             </div>
             
-            <div className="pt-4 border-t border-white/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+            <div className="pt-4 border-t border-walnut/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
               <div>
-                <span className="text-[10px] text-white/40 block uppercase tracking-widest">Direct Contact</span>
-                <span className="text-sm font-semibold text-gold font-sans">+91 XXXXX XXXXX</span>
+                <span className="text-[10px] text-charcoal/40 block uppercase tracking-widest">Direct Contact</span>
+                <span className="text-sm font-semibold text-walnut font-sans">+91 XXXXX XXXXX</span>
               </div>
               <div>
-                <span className="text-[10px] text-white/40 block uppercase tracking-widest">Direct Email</span>
-                <span className="text-sm font-semibold text-gold font-sans">info@rohiniplywood.com</span>
+                <span className="text-[10px] text-charcoal/40 block uppercase tracking-widest">Direct Email</span>
+                <span className="text-sm font-semibold text-walnut font-sans">info@rohiniplywood.com</span>
               </div>
             </div>
           </div>
@@ -649,18 +649,18 @@ export default function Home() {
       </section>
 
       {/* 7. BRANDS WE DEAL WITH */}
-      <section className="bg-charcoal text-white py-16 px-6 md:px-12 border-t border-b border-white/5 w-full">
+      <section className="bg-white text-charcoal py-16 px-6 md:px-12 border-t border-b border-walnut/10 w-full">
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12">
           <div className="text-center lg:text-left lg:max-w-xs space-y-2">
             <span className="text-gold text-[10px] tracking-widest font-semibold uppercase block">Collaborative Network</span>
-            <h3 className="font-serif text-lg tracking-wide font-light">Trusted by Global Furnishing Brands</h3>
+            <h3 className="font-serif text-lg tracking-wide font-light text-walnut">Trusted by Global Furnishing Brands</h3>
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-x-12 gap-y-8 w-full max-w-3xl justify-items-center items-center">
             {partners.map((p) => (
               <span
                 key={p.id}
-                className="font-serif text-sm tracking-[0.3em] font-light text-white/30 hover:text-gold transition-all duration-300 cursor-default uppercase"
+                className="font-serif text-sm tracking-[0.3em] font-light text-walnut/30 hover:text-gold transition-all duration-300 cursor-default uppercase"
               >
                 {p.name}
               </span>
@@ -670,36 +670,36 @@ export default function Home() {
       </section>
 
       {/* 8. CONTACT CTA SECTION */}
-      <section className="relative py-28 px-6 md:px-12 bg-charcoal overflow-hidden text-center text-white w-full select-none">
+      <section className="relative py-28 px-6 md:px-12 bg-cream overflow-hidden text-center text-charcoal w-full select-none border-t border-walnut/10">
         <div className="absolute inset-0 z-0">
           <Image
             src="https://images.unsplash.com/photo-1507346122424-9f719067f08d?q=80&w=1200"
             alt="Walnut panel texture"
             fill
-            className="object-cover opacity-20"
+            className="object-cover opacity-15"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-charcoal via-transparent to-charcoal" />
+          <div className="absolute inset-0 bg-gradient-to-r from-cream via-cream/80 to-cream" />
         </div>
 
         <div className="relative z-10 max-w-3xl mx-auto space-y-8">
           <span className="text-gold text-xs font-semibold tracking-[0.25em] uppercase block">Work with Us</span>
-          <h2 className="font-serif text-3xl sm:text-5xl font-light tracking-wide text-white leading-tight">
+          <h2 className="font-serif text-3xl sm:text-5xl font-light tracking-wide text-walnut leading-tight">
             Let's Build Something Timeless
           </h2>
-          <p className="text-white/60 text-sm max-w-xl mx-auto font-light font-sans leading-relaxed">
+          <p className="text-charcoal/70 text-sm max-w-xl mx-auto font-light font-sans leading-relaxed">
             Collaborate directly with our timber specialists to request materials specs, get pricing parameters, and plan wood deliveries.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
             <Link
               href="/contact"
-              className="w-full sm:w-auto px-8 py-4 bg-gold hover:bg-white text-walnut font-semibold text-xs tracking-widest uppercase transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
+              className="w-full sm:w-auto px-8 py-4 bg-walnut hover:bg-gold text-white hover:text-walnut font-semibold text-xs tracking-widest uppercase transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer shadow-sm"
             >
               Get a Quote <ArrowRight size={14} />
             </Link>
             <a
               href="tel:+919741767564"
-              className="w-full sm:w-auto px-8 py-4 bg-transparent border border-white/20 hover:border-gold hover:text-gold text-white font-semibold text-xs tracking-widest uppercase transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
+              className="w-full sm:w-auto px-8 py-4 bg-transparent border border-walnut/20 hover:border-gold hover:text-gold text-walnut font-semibold text-xs tracking-widest uppercase transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
             >
               <Phone size={14} /> Call Sales Partner
             </a>

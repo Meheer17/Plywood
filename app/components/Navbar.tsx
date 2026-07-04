@@ -25,26 +25,15 @@ export default function Navbar() {
   }, []);
 
   const isDarkHeroPage = pathname === "/";
-  // The navbar is solid and dark on all subpages. On the home page, it transitions on scroll or menu toggle.
-  const forceDarkTheme = !isDarkHeroPage || isScrolled || isMobileMenuOpen;
+  const textColorClass = "text-walnut/80 hover:text-walnut";
 
-  const textColorClass = forceDarkTheme
-    ? "text-white/80 hover:text-white"
-    : "text-walnut/80 hover:text-walnut";
+  const logoColorClass = "text-walnut";
 
-  const logoColorClass = forceDarkTheme
-    ? "text-white"
-    : "text-walnut";
+  const activeLineColor = "bg-gold";
 
-  const activeLineColor = forceDarkTheme ? "bg-gold" : "bg-walnut";
+  const buttonClass = "bg-walnut/5 hover:bg-walnut text-walnut hover:text-white border-walnut/40 hover:border-walnut";
 
-  const buttonClass = forceDarkTheme
-    ? "bg-gold/10 hover:bg-gold text-gold hover:text-walnut border-gold/40 hover:border-gold"
-    : "bg-walnut/5 hover:bg-walnut text-walnut hover:text-white border-walnut/40 hover:border-walnut";
-
-  const mobileToggleColorClass = forceDarkTheme
-    ? "text-white/95 hover:text-gold"
-    : "text-walnut hover:text-gold";
+  const mobileToggleColorClass = "text-walnut hover:text-gold";
 
   const navLinks = [
     { name: "Home", href: "/" },
@@ -54,11 +43,7 @@ export default function Navbar() {
 
   return (
     <motion.header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        forceDarkTheme
-          ? "bg-charcoal/95 backdrop-blur-md border-b border-white/5 py-4 shadow-lg"
-          : "bg-transparent py-6"
-      }`}
+      className="fixed top-0 left-0 right-0 z-50 bg-cream/95 backdrop-blur-md border-b border-walnut/10 py-4 shadow-sm"
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.8 }}
@@ -75,13 +60,13 @@ export default function Navbar() {
               className="object-contain"
             />
           </div>
-          <div className="relative h-5 w-24 shrink-0 hidden sm:block">
+          <div className="relative h-5 w-24 shrink-0">
             <Image
               src="/zentree_text_logo.png"
               alt="Zentree Text Logo"
               fill
               sizes="96px"
-              className="object-contain brightness-0 invert"
+              className="object-contain"
             />
           </div>
         </Link>
@@ -136,7 +121,7 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-charcoal border-b border-white/5 backdrop-blur-lg"
+            className="md:hidden bg-cream border-b border-walnut/10 backdrop-blur-lg"
           >
             <div className="px-6 py-8 flex flex-col gap-6">
               {navLinks.map((link) => {
@@ -147,7 +132,7 @@ export default function Navbar() {
                     href={link.href}
                     onClick={() => setIsMobileMenuOpen(false)}
                     className={`text-sm tracking-widest uppercase font-medium py-1 transition-colors ${
-                      isActive ? "text-gold" : "text-white/70 hover:text-white"
+                      isActive ? "text-gold" : "text-walnut/70 hover:text-walnut"
                     }`}
                   >
                     {link.name}
@@ -157,7 +142,7 @@ export default function Navbar() {
               <Link
                 href="/contact"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="flex items-center justify-center gap-2 text-xs font-semibold uppercase tracking-widest py-4 bg-gold hover:bg-gold/90 text-walnut transition-colors w-full text-center"
+                className="flex items-center justify-center gap-2 text-xs font-semibold uppercase tracking-widest py-4 bg-walnut hover:bg-gold text-white hover:text-walnut transition-colors w-full text-center"
               >
                 Get a Quote <ArrowRight size={14} />
               </Link>
