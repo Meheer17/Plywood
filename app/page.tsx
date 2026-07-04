@@ -549,7 +549,7 @@ export default function Home() {
               </div>
               <div className="flex items-start gap-3">
                 <span className="w-1.5 h-1.5 rounded-full bg-gold shrink-0 mt-2"></span>
-                <p><strong>Offerings:</strong> Full Zentree plywood lines, custom architectural veneers, laminates, and decorative panels.</p>
+                <p><strong>Offerings:</strong> Full Zentree plywood lines, custom architectural veneers and laminates.</p>
               </div>
               <div className="flex items-start gap-3">
                 <span className="w-1.5 h-1.5 rounded-full bg-gold shrink-0 mt-2"></span>
@@ -560,11 +560,7 @@ export default function Home() {
             <div className="pt-4 border-t border-walnut/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
               <div>
                 <span className="text-[10px] text-charcoal/40 block uppercase tracking-widest">Direct Contact</span>
-                <span className="text-sm font-semibold text-walnut font-sans">+91 XXXXX XXXXX</span>
-              </div>
-              <div>
-                <span className="text-[10px] text-charcoal/40 block uppercase tracking-widest">Direct Email</span>
-                <span className="text-sm font-semibold text-walnut font-sans">info@rohiniplywood.com</span>
+                <span className="text-sm font-semibold text-walnut font-sans">+91 62025 88042, +91 63644 45712</span>
               </div>
             </div>
           </div>

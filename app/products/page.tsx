@@ -78,13 +78,13 @@ function ProductsContent() {
         </div>
         <div className="relative z-10 max-w-7xl mx-auto space-y-4">
           <span className="text-gold text-xs font-semibold tracking-[0.3em] uppercase block">
-            Architectural Inventory
+            Inventory
           </span>
           <h1 className="font-serif text-3xl md:text-5xl font-light tracking-wide text-white">
             The Timber Collection
           </h1>
           <p className="text-white/60 text-sm max-w-xl font-light">
-            Browse our curated collection of luxury plywoods, custom cut veneers, solid block boards, and acoustic wall panels.
+            Browse our curated collection of luxury plywoods and solid block boards.
           </p>
         </div>
       </section>
@@ -149,7 +149,7 @@ function ProductsContent() {
 
         {/* Results Counter */}
         <div className="text-xs text-walnut/50 mb-6 font-sans tracking-wide">
-          Showing {filteredProducts.length} of {mockProducts.length} architectural products
+          Showing {filteredProducts.length} of {mockProducts.length} products
         </div>
 
         {/* Catalog Grid */}

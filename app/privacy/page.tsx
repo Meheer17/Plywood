@@ -71,8 +71,7 @@ export default function PrivacyPage() {
             <div className="bg-cream/50 p-4 border border-walnut/5 text-sm text-charcoal/80 space-y-1">
               <p><strong>Rohini Plywood & Deco Panel</strong></p>
               <p>Bangalore, Karnataka, India</p>
-              <p>Email: info@rohiniplywood.com</p>
-              <p>Phone/WhatsApp: +91 97417 67564</p>
+              <p>Phone/WhatsApp: +91 63644 45712</p>
             </div>
           </div>
         </div>

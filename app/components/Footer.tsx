@@ -104,11 +104,7 @@ export default function Footer() {
             </li>
             <li className="flex items-center gap-3">
               <Phone size={16} className="text-gold shrink-0" />
-              <span>+91 XXXXX XXXXX</span>
-            </li>
-            <li className="flex items-center gap-3">
-              <Mail size={16} className="text-gold shrink-0" />
-              <span>info@rohiniplywood.com</span>
+              <span>+91 62025 88042, +91 63644 45712</span>
             </li>
           </ul>
           {/* Grayscale Map Embed */}

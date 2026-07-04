@@ -164,13 +164,13 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
                   </div>
                   <h4 className="font-serif text-lg text-walnut">Request Received</h4>
                   <p className="text-xs text-walnut/70 max-w-xs">
-                    Our wood architectural specialist will contact you shortly with samples and pricing options.
+                    Our wood specialist will contact you shortly with samples and pricing options.
                   </p>
                 </motion.div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <h4 className="font-serif text-base text-walnut font-medium tracking-wide">
-                    Request Architectural Consultation
+                    Request Consultation
                   </h4>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     <input

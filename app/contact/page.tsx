@@ -61,24 +61,24 @@ export default function ContactPage() {
     {
       title: "Call Us Direct",
       desc: "Speak with a product specialist",
-      val: "+91 XXXXX XXXXX",
-      action: "tel:+919741767564",
+      val: "+91 62025 88042",
+      action: "tel:+916202588042",
+      icon: <Phone className="text-gold" size={20} />
+    },
+     {
+      title: "Call Us Direct (Alternative)",
+      desc: "Speak with a product specialist",
+      val: "+91 63644 45712",
+      action: "tel:91 6364445712",
       icon: <Phone className="text-gold" size={20} />
     },
     {
       title: "WhatsApp Chat",
       desc: "Instant specs & sample requests",
-      val: "+91 XXXXX XXXXX",
-      action: "https://wa.me/919741767564",
+      val: "+91 63644 45712",
+      action: "https://wa.me/916364445712",
       icon: <MessageSquare className="text-gold" size={20} />
     },
-    {
-      title: "Email Inquiry",
-      desc: "Submit project blueprints",
-      val: "info@rohiniplywood.com",
-      action: "mailto:info@rohiniplywood.com",
-      icon: <Mail className="text-gold" size={20} />
-    }
   ];
 
   return (
@@ -116,11 +116,7 @@ export default function ContactPage() {
               </li>
               <li className="flex items-center gap-4">
                 <Phone size={18} className="text-gold shrink-0" />
-                <span>+91 XXXXX XXXXX</span>
-              </li>
-              <li className="flex items-center gap-4">
-                <Mail size={18} className="text-gold shrink-0" />
-                <span>info@rohiniplywood.com</span>
+                <span>+91 62025 88042, +91 63644 45712</span>
               </li>
             </ul>
           </div>
@@ -229,7 +225,6 @@ export default function ContactPage() {
                       <option value="Commercial Plywood">Commercial Plywood</option>
                       <option value="Block Boards">Block Boards</option>
                       <option value="Laminates">Laminates</option>
-                      <option value="Decorative Panels">Decorative Panels</option>
                     </select>
                   </div>
                 </div>
