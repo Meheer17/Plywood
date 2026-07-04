@@ -86,7 +86,7 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.95, y: 20 }}
           transition={{ duration: 0.4, ease: "easeOut" }}
-          className="relative bg-[#F8F5F0] max-w-4xl w-full border border-gold/20 shadow-2xl overflow-hidden z-10 grid grid-cols-1 md:grid-cols-12 max-h-[90vh] md:max-h-[85vh] rounded-none"
+          className="relative bg-[#F8F5F0] max-w-4xl w-full border border-gold/20 shadow-2xl overflow-y-auto md:overflow-hidden z-10 grid grid-cols-1 md:grid-cols-12 max-h-[90vh] md:max-h-[85vh] rounded-none"
         >
           {/* Close button */}
           <button
@@ -100,13 +100,13 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
           {/* Left: Media & Features */}
           <div className="md:col-span-5 bg-charcoal text-white p-6 sm:p-8 flex flex-col justify-between overflow-y-auto md:max-h-[85vh]">
             <div className="space-y-6">
-              <div className="relative h-48 w-full border border-white/5 overflow-hidden bg-charcoal">
+              <div className="relative h-80 w-full border border-white/5 overflow-hidden bg-charcoal">
                 <Image
                   src={product.image}
                   alt={product.name}
                   fill
                   sizes="(max-width: 768px) 100vw, 33vw"
-                  className="object-contain rotate-90 scale-[1.35]"
+                  className="object-contain"
                 />
               </div>
               <div>

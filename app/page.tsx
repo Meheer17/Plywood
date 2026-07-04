@@ -6,7 +6,7 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { 
   ArrowRight, ShieldCheck, Droplet, Bug, Leaf, Award, 
-  ChevronLeft, ChevronRight, Star, Quote, Phone, HelpCircle 
+  ChevronLeft, ChevronRight, Star, Quote, Phone, HelpCircle, X
 } from "lucide-react";
 import rawProducts from "@/app/data/products.json";
 import ProductModal from "@/app/components/ProductModal";
@@ -80,6 +80,7 @@ export default function Home() {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [activeProduct, setActiveProduct] = useState<any>(null);
   const [testimonialIndex, setTestimonialIndex] = useState(0);
+  const [lightboxImage, setLightboxImage] = useState<string | null>(null);
 
   const categories = [
     { name: "Premium (Waterproof) Plywood", img: "/categories/premium_waterproof_plywood.jpg", desc: "100% boiling-water waterproof & termite-proof panels" },
@@ -403,13 +404,16 @@ export default function Home() {
                 className="group flex flex-col justify-between border border-walnut/10 bg-white p-4 shadow-sm"
               >
                 <div className="space-y-4">
-                  <div className="relative aspect-[4/3] w-full overflow-hidden bg-cream border border-walnut/5">
+                  <div 
+                    onClick={() => setLightboxImage(product.image)}
+                    className="relative aspect-[4/3] w-full overflow-hidden bg-cream border border-walnut/5 cursor-zoom-in"
+                  >
                     <Image
                       src={product.image}
                       alt={product.name}
                       fill
                       sizes="(max-width: 768px) 100vw, 33vw"
-                      className="object-contain rotate-90 scale-[1.35] group-hover:scale-[1.4] transition-transform duration-500"
+                      className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>
                   <div>
@@ -602,19 +606,19 @@ export default function Home() {
             {/* Author Profile */}
             <div className="flex items-center gap-4">
               <div className="relative w-12 h-12 rounded-full overflow-hidden border border-walnut/10">
-                <Image
+                {/* <Image
                   src={testimonials[testimonialIndex].avatar}
                   alt={testimonials[testimonialIndex].name}
                   fill
                   className="object-cover"
-                />
+                /> */}
               </div>
               <div className="text-left">
                 <h4 className="text-sm font-semibold text-walnut leading-none">
-                  {testimonials[testimonialIndex].name}
+                  {/* {testimonials[testimonialIndex].name} */}
                 </h4>
                 <span className="text-xs text-charcoal/50 font-light mt-1 block">
-                  {testimonials[testimonialIndex].role}
+                  {/* {testimonials[testimonialIndex].role} */}
                 </span>
               </div>
             </div>
@@ -708,6 +712,44 @@ export default function Home() {
 
       {/* 9. PRODUCT MODAL */}
       <ProductModal product={activeProduct} onClose={() => setActiveProduct(null)} />
+
+      {/* Lightbox Modal for Full Image View */}
+      <AnimatePresence>
+        {lightboxImage && (
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 p-4 backdrop-blur-md cursor-zoom-out"
+            onClick={() => setLightboxImage(null)}
+          >
+            {/* Close button */}
+            <button 
+              className="absolute top-6 right-6 text-white hover:text-gold transition-colors p-2.5 bg-white/10 border border-white/10 cursor-pointer"
+              onClick={() => setLightboxImage(null)}
+              aria-label="Close image preview"
+            >
+              <X size={20} />
+            </button>
+            
+            {/* Image Box */}
+            <motion.div 
+              initial={{ scale: 0.9, y: 10 }}
+              animate={{ scale: 1, y: 0 }}
+              exit={{ scale: 0.9, y: 10 }}
+              transition={{ type: "spring", stiffness: 300, damping: 25 }}
+              className="relative max-w-full max-h-[85vh]"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <img 
+                src={lightboxImage} 
+                alt="Plywood product detail" 
+                className="max-w-full max-h-[85vh] object-contain shadow-2xl border border-white/10"
+              />
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }

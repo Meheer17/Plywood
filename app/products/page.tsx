@@ -4,7 +4,7 @@ import { Suspense, useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { Search, SlidersHorizontal, ArrowRight } from "lucide-react";
+import { Search, SlidersHorizontal, ArrowRight, X } from "lucide-react";
 import rawProducts from "@/app/data/products.json";
 import ProductModal from "@/app/components/ProductModal";
 
@@ -29,6 +29,7 @@ function ProductsContent() {
   const [selectedCategory, setSelectedCategory] = useState(initialCategory);
   const [selectedSubcategory, setSelectedSubcategory] = useState("All");
   const [activeProduct, setActiveProduct] = useState<any>(null);
+  const [lightboxImage, setLightboxImage] = useState<string | null>(null);
 
   // Sync category if URL parameter changes
   useEffect(() => {
@@ -116,8 +117,8 @@ function ProductsContent() {
                   key={cat}
                   onClick={() => setSelectedCategory(cat)}
                   className={`px-3.5 py-2.5 text-[10px] font-bold uppercase tracking-wider transition-all duration-300 border rounded-none shrink-0 cursor-pointer ${selectedCategory === cat
-                      ? "bg-walnut text-white border-walnut"
-                      : "bg-white text-walnut/70 border-walnut/15 hover:border-walnut/40 hover:text-walnut"
+                    ? "bg-walnut text-white border-walnut"
+                    : "bg-white text-walnut/70 border-walnut/15 hover:border-walnut/40 hover:text-walnut"
                     }`}
                 >
                   {cat}
@@ -136,8 +137,8 @@ function ProductsContent() {
                 key={subcat}
                 onClick={() => setSelectedSubcategory(subcat)}
                 className={`px-3.5 py-2 text-[10px] font-bold uppercase tracking-wider transition-all duration-200 border rounded-none cursor-pointer ${selectedSubcategory === subcat
-                    ? "bg-gold text-walnut border-gold"
-                    : "bg-white text-walnut/70 border-walnut/15 hover:border-walnut/40 hover:text-walnut"
+                  ? "bg-gold text-walnut border-gold"
+                  : "bg-white text-walnut/70 border-walnut/15 hover:border-walnut/40 hover:text-walnut"
                   }`}
               >
                 {subcat}
@@ -183,13 +184,16 @@ function ProductsContent() {
                   className="group flex flex-col justify-between border border-walnut/10 bg-white p-4 shadow-sm"
                 >
                   <div className="space-y-4">
-                    <div className="relative aspect-[4/3] w-full overflow-hidden bg-cream border border-walnut/5">
+                    <div
+                      onClick={() => setLightboxImage(product.image)}
+                      className="relative aspect-[4/3] w-full overflow-hidden bg-cream border border-walnut/5 cursor-zoom-in"
+                    >
                       <Image
                         src={product.image}
                         alt={product.name}
                         fill
                         sizes="(max-width: 768px) 100vw, 33vw"
-                        className="object-contain rotate-90 scale-[1.35] group-hover:scale-[1.4] transition-transform duration-500"
+                        className="object-cover object-center group-hover:scale-[1.41] origin-center transition duration-500"
                       />
                     </div>
                     <div>
@@ -233,6 +237,44 @@ function ProductsContent() {
 
       {/* Product Modal */}
       <ProductModal product={activeProduct} onClose={() => setActiveProduct(null)} />
+
+      {/* Lightbox Modal for Full Image View */}
+      <AnimatePresence>
+        {lightboxImage && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 p-4 backdrop-blur-md cursor-zoom-out"
+            onClick={() => setLightboxImage(null)}
+          >
+            {/* Close button */}
+            <button
+              className="absolute top-6 right-6 text-white hover:text-gold transition-colors p-2.5 bg-white/10 border border-white/10 cursor-pointer"
+              onClick={() => setLightboxImage(null)}
+              aria-label="Close image preview"
+            >
+              <X size={20} />
+            </button>
+
+            {/* Image Box */}
+            <motion.div
+              initial={{ scale: 0.9, y: 10 }}
+              animate={{ scale: 1, y: 0 }}
+              exit={{ scale: 0.9, y: 10 }}
+              transition={{ type: "spring", stiffness: 300, damping: 25 }}
+              className="relative max-w-full max-h-[85vh]"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <img
+                src={lightboxImage}
+                alt="Plywood product detail"
+                className="max-w-full max-h-[85vh] object-contain shadow-2xl border border-white/10"
+              />
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
