@@ -7,8 +7,7 @@ export default function Footer() {
     "Premium (Waterproof) Plywood",
     "Commercial Plywood",
     "Block Boards",
-    "Laminates",
-    "Decorative Panels"
+    "Laminates"
   ];
 
   const quickLinks = [

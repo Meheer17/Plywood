@@ -67,7 +67,7 @@
     "id": "ply-zt-project-com",
     "name": "Zentree Project Com Ply",
     "category": "Commercial Plywood",
-    "image": "/Zentree_Gurjan.jpeg",
+    "image": "/Zentree_Project.jpeg",
     "description": "This plywood is a budget option constructed using a mix of Neem and other species, featuring full thickness. It is intended for wardrobe applications and is available in thicknesses from 6mm to 18mm. It comes in 8x4 and 7x4 sheet sizes.",
     "specs": {
       "Thickness": "6mm to 18mm",
@@ -110,6 +110,7 @@
     "id": "lam-zt-2198",
     "name": "Zentree 2198 | Cotton Fabric Grey",
     "category": "Laminates",
+    "subcategory": "Fabric",
     "image": "/laminates/2198_cotton_fabric_grey.jpg",
     "description": "A premium fabric-textured laminate emulating the clean, refined texture of woven grey cotton, bringing warmth and elegance to modern spaces.",
     "specs": {
@@ -131,6 +132,7 @@
     "id": "lam-zt-5119",
     "name": "Zentree 5119 | Dotted Fabric",
     "category": "Laminates",
+    "subcategory": "Fabric",
     "image": "/laminates/5119_dotted_fabric.jpg",
     "description": "Featuring a subtle, structured dotted weave motif that offers a pleasant tactile experience and a clean contemporary look.",
     "specs": {
@@ -152,6 +154,7 @@
     "id": "lam-zt-2205",
     "name": "Zentree 2205 | Linen Beige",
     "category": "Laminates",
+    "subcategory": "Fabric",
     "image": "/laminates/2205_linen_beige.jpg",
     "description": "A classic beige linen texture offering natural warmth and organic texture, ideal for minimalist bedrooms and wardrobes.",
     "specs": {
@@ -173,6 +176,7 @@
     "id": "lam-zt-5113",
     "name": "Zentree 5113 | Classic Fabric Grey",
     "category": "Laminates",
+    "subcategory": "Fabric",
     "image": "/laminates/5113_classic_fabric_grey.jpg",
     "description": "A timeless classic grey fabric finish designed to provide a textured backdrop for study tables and modern living units.",
     "specs": {
@@ -194,6 +198,7 @@
     "id": "lam-zt-3001",
     "name": "Zentree 3001 | Cambric Light Grey",
     "category": "Laminates",
+    "subcategory": "Fabric",
     "image": "/laminates/3001_cambric_light_grey.jpg",
     "description": "A light grey cambric weave texture laminate, bringing a sophisticated textile look to modular panels.",
     "specs": {
@@ -215,6 +220,7 @@
     "id": "lam-zt-8824",
     "name": "Zentree 8824 | Gauze Fab",
     "category": "Laminates",
+    "subcategory": "Fabric",
     "image": "/laminates/8824_gauze_fab.jpg",
     "description": "A fine gauze-like texture with a subtle cross-hatched pattern, perfect for adding visual depth to cabinet interiors.",
     "specs": {
@@ -236,6 +242,7 @@
     "id": "lam-zt-8825",
     "name": "Zentree 8825 | Woven Fab",
     "category": "Laminates",
+    "subcategory": "Fabric",
     "image": "/laminates/8825_woven_fab.jpg",
     "description": "An organic woven texture with soft beige-grey undertones, adding a soft tactile dimension to furniture design.",
     "specs": {
@@ -257,6 +264,7 @@
     "id": "lam-zt-8826",
     "name": "Zentree 8826 | Woven Fab",
     "category": "Laminates",
+    "subcategory": "Fabric",
     "image": "/laminates/8826_woven_fab.jpg",
     "description": "A rich woven fabric design with warm ivory undertones, offering a premium and inviting tactile feel.",
     "specs": {
@@ -278,6 +286,7 @@
     "id": "lam-zt-8829",
     "name": "Zentree 8829 | Gauze Fab",
     "category": "Laminates",
+    "subcategory": "Fabric",
     "image": "/laminates/8829_gauze_fab.jpg",
     "description": "A delicate, slightly darker gauze texture offering a perfect balance between tactile interest and minimalist styling.",
     "specs": {
@@ -299,6 +308,7 @@
     "id": "lam-zt-5104",
     "name": "Zentree 5104 | Cusino",
     "category": "Laminates",
+    "subcategory": "Fabric",
     "image": "/laminates/5104_cusino.jpg",
     "description": "A highly sophisticated solid fabric design with a soft, brushed feel, creating an atmosphere of cozy luxury.",
     "specs": {
@@ -320,6 +330,7 @@
     "id": "lam-zt-8874",
     "name": "Zentree 8874 | Chiffon Fab",
     "category": "Laminates",
+    "subcategory": "Fabric",
     "image": "/laminates/8874_chiffon_fab.jpg",
     "description": "A light, airy chiffon-style fabric texture in an elegant neutral tone, perfect for luxury dresser units.",
     "specs": {
@@ -341,6 +352,7 @@
     "id": "lam-zt-8875",
     "name": "Zentree 8875 | Chiffon Fab",
     "category": "Laminates",
+    "subcategory": "Fabric",
     "image": "/laminates/8875_chiffon_fab.jpg",
     "description": "A neutral grey chiffon-textured laminate, providing a sleek, sophisticated feel to cabinet doors.",
     "specs": {
@@ -362,6 +374,7 @@
     "id": "lam-zt-2124",
     "name": "Zentree 2124 | Virola Wood Brown",
     "category": "Laminates",
+    "subcategory": "Stone and Marble",
     "image": "/laminates/2124_virola_wood_brown.jpg",
     "description": "A deep Virola wood design with rich brown vertical grains, adding classic elegance and structural look to wall panelling.",
     "specs": {
@@ -383,6 +396,7 @@
     "id": "lam-zt-2101",
     "name": "Zentree 2101 | Precious Beech",
     "category": "Laminates",
+    "subcategory": "Stone and Marble",
     "image": "/laminates/2101_precious_beech.jpg",
     "description": "A warm, natural light beech woodgrain laminate with soft golden tones, ideal for office furniture and school desks.",
     "specs": {
@@ -404,6 +418,7 @@
     "id": "lam-zt-2102",
     "name": "Zentree 2102 | Naina Teak Brown",
     "category": "Laminates",
+    "subcategory": "Stone and Marble",
     "image": "/laminates/2102_naina_teak_brown.jpg",
     "description": "A premium teak wood reproduction with striking brown grains, showcasing the classic heritage of Indian Teakwood.",
     "specs": {
@@ -425,6 +440,7 @@
     "id": "lam-zt-2115",
     "name": "Zentree 2115 | Hilandpine (Yellow)",
     "category": "Laminates",
+    "subcategory": "Stone and Marble",
     "image": "/laminates/2115_hilandpine_yellow.jpg",
     "description": "A vibrant, warm yellow-pine grain laminate featuring detailed growth rings and knot details for rustic spaces.",
     "specs": {
@@ -446,6 +462,7 @@
     "id": "lam-zt-2106",
     "name": "Zentree 2106 | ST Wenge",
     "category": "Laminates",
+    "subcategory": "Stone and Marble",
     "image": "/laminates/2106_st_wenge.jpg",
     "description": "A dark, dramatic Wenge wood texture with deep chocolate bands, perfect for high-contrast modern styling.",
     "specs": {
@@ -467,6 +484,7 @@
     "id": "lam-zt-7401",
     "name": "Zentree 7401 | Sand Stone Grey",
     "category": "Laminates",
+    "subcategory": "Stone and Marble",
     "image": "/laminates/7401_sand_stone_grey.jpg",
     "description": "A realistic sand-stone texture laminate with concrete grey tones, bringing an industrial, architectural edge to tops and walls.",
     "specs": {
@@ -488,6 +506,7 @@
     "id": "lam-zt-7101",
     "name": "Zentree 7101 | White",
     "category": "Laminates",
+    "subcategory": "Solid",
     "image": "/laminates/7101_white.jpg",
     "description": "A clean, bright solid white laminate in a premium matte finish, providing a sterile, high-contrast base for modern layouts.",
     "specs": {
@@ -509,6 +528,7 @@
     "id": "lam-zt-7102",
     "name": "Zentree 7102 | Off White",
     "category": "Laminates",
+    "subcategory": "Solid",
     "image": "/laminates/7102_off_white.jpg",
     "description": "A soft off-white solid laminate, offering a gentler, warmer white option for kitchen cabinets.",
     "specs": {
@@ -530,6 +550,7 @@
     "id": "lam-zt-7103",
     "name": "Zentree 7103 | Light Grey",
     "category": "Laminates",
+    "subcategory": "Solid",
     "image": "/laminates/7103_light_grey.jpg",
     "description": "An elegant neutral light grey solid colour, providing a modern, balanced look for contemporary storage units.",
     "specs": {
@@ -551,6 +572,7 @@
     "id": "lam-zt-7104",
     "name": "Zentree 7104 | Gothic Grey",
     "category": "Laminates",
+    "subcategory": "Solid",
     "image": "/laminates/7104_gothic_grey.jpg",
     "description": "A medium-toned gothic grey solid laminate, perfect for sleek modular kitchen shutters and credenzas.",
     "specs": {
@@ -572,6 +594,7 @@
     "id": "lam-zt-7105",
     "name": "Zentree 7105 | Dark Grey",
     "category": "Laminates",
+    "subcategory": "Solid",
     "image": "/laminates/7105_dark_grey.jpg",
     "description": "A bold, deep charcoal solid laminate in matte, adding a masculine, sophisticated touch to high-end designs.",
     "specs": {
@@ -593,6 +616,7 @@
     "id": "lam-zt-7107",
     "name": "Zentree 7107 | Ivory",
     "category": "Laminates",
+    "subcategory": "Solid",
     "image": "/laminates/7107_ivory.jpg",
     "description": "A classic, warm ivory cream solid colour, bringing a soft, traditional brightness to classic wardrobes.",
     "specs": {
@@ -608,27 +632,6 @@
       "Fingerprint & smudge resistant surface",
       "High resistance to fading under UV exposure",
       "Ideal for modern minimalist modular kitchens"
-    ]
-  },
-  {
-    "id": "dec-01",
-    "name": "Linear Fluted Decorative Panel",
-    "category": "Decorative Panels",
-    "image": "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=600",
-    "description": "Luxurious fluted architectural wall panels designed to introduce texture, depth, and acoustical dampening to high-end residential and commercial lobbies. Finished in a gorgeous natural white oak.",
-    "specs": {
-      "Dimensions": "2400mm x 600mm x 21mm",
-      "Flute Width": "25mm wide slats",
-      "Felt Backing": "9mm recycled acoustic PET felt",
-      "Wood Species": "White Oak veneer on black MDF",
-      "Flame Retardant": "Class B1 available",
-      "Origin": "Denmark"
-    },
-    "features": [
-      "Acoustic sound absorption (NRC 0.85+)",
-      "Recycled PET felt backing",
-      "Modern Scandinavian minimalist style",
-      "Interlocking design for invisible joints"
     ]
   }
 ]

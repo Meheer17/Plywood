@@ -12,6 +12,7 @@ interface Product {
   id: string;
   name: string;
   category: string;
+  subcategory?: string;
   image: string;
   description: string;
   specs: Record<string, string>;
@@ -26,6 +27,7 @@ function ProductsContent() {
 
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState(initialCategory);
+  const [selectedSubcategory, setSelectedSubcategory] = useState("All");
   const [activeProduct, setActiveProduct] = useState<any>(null);
 
   // Sync category if URL parameter changes
@@ -36,24 +38,28 @@ function ProductsContent() {
     }
   }, [searchParams]);
 
+  useEffect(() => {
+    setSelectedSubcategory("All");
+  }, [selectedCategory]);
+
   const categories = [
     "All",
     "Premium (Waterproof) Plywood",
     "Commercial Plywood",
     "Block Boards",
-    "Laminates",
-    "Decorative Panels"
+    "Laminates"
   ];
 
   // Filtering logic
   const filteredProducts = mockProducts.filter((product) => {
-    const matchesSearch = product.name.toLowerCase().includes(searchTerm.toLowerCase()) || 
-                          product.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                          Object.values(product.specs).some(spec => spec.toLowerCase().includes(searchTerm.toLowerCase()));
-    
-    const matchesCategory = selectedCategory === "All" || product.category === selectedCategory;
+    const matchesSearch = product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      product.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      Object.values(product.specs).some(spec => spec.toLowerCase().includes(searchTerm.toLowerCase()));
 
-    return matchesSearch && matchesCategory;
+    const matchesCategory = selectedCategory === "All" || product.category === selectedCategory;
+    const matchesSubcategory = selectedCategory !== "Laminates" || selectedSubcategory === "All" || product.subcategory === selectedSubcategory;
+
+    return matchesSearch && matchesCategory && matchesSubcategory;
   });
 
   return (
@@ -84,7 +90,7 @@ function ProductsContent() {
 
       {/* Main Grid Section */}
       <section className="max-w-7xl mx-auto px-6 md:px-12">
-        
+
         {/* Controls: Search and Filters */}
         <div className="flex flex-col lg:flex-row gap-6 items-stretch justify-between mb-10 pb-6 border-b border-walnut/10">
           {/* Search bar */}
@@ -109,11 +115,10 @@ function ProductsContent() {
                 <button
                   key={cat}
                   onClick={() => setSelectedCategory(cat)}
-                  className={`px-3.5 py-2.5 text-[10px] font-bold uppercase tracking-wider transition-all duration-300 border rounded-none shrink-0 cursor-pointer ${
-                    selectedCategory === cat
+                  className={`px-3.5 py-2.5 text-[10px] font-bold uppercase tracking-wider transition-all duration-300 border rounded-none shrink-0 cursor-pointer ${selectedCategory === cat
                       ? "bg-walnut text-white border-walnut"
                       : "bg-white text-walnut/70 border-walnut/15 hover:border-walnut/40 hover:text-walnut"
-                  }`}
+                    }`}
                 >
                   {cat}
                 </button>
@@ -121,6 +126,25 @@ function ProductsContent() {
             </div>
           </div>
         </div>
+
+        {/* Subcategories row for Laminates */}
+        {selectedCategory === "Laminates" && (
+          <div className="flex items-center gap-1.5 mb-6 overflow-x-auto pb-2 scrollbar-none bg-walnut/5 p-2 border border-walnut/10">
+            <span className="text-[10px] font-bold uppercase tracking-wider text-walnut/50 mr-2 ml-1">Laminate Types:</span>
+            {["All", "Solid", "Fabric", "Stone and Marble"].map((subcat) => (
+              <button
+                key={subcat}
+                onClick={() => setSelectedSubcategory(subcat)}
+                className={`px-3.5 py-2 text-[10px] font-bold uppercase tracking-wider transition-all duration-200 border rounded-none cursor-pointer ${selectedSubcategory === subcat
+                    ? "bg-gold text-walnut border-gold"
+                    : "bg-white text-walnut/70 border-walnut/15 hover:border-walnut/40 hover:text-walnut"
+                  }`}
+              >
+                {subcat}
+              </button>
+            ))}
+          </div>
+        )}
 
         {/* Results Counter */}
         <div className="text-xs text-walnut/50 mb-6 font-sans tracking-wide">
@@ -143,7 +167,7 @@ function ProductsContent() {
             </button>
           </div>
         ) : (
-          <motion.div 
+          <motion.div
             layout
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
@@ -165,7 +189,7 @@ function ProductsContent() {
                         alt={product.name}
                         fill
                         sizes="(max-width: 768px) 100vw, 33vw"
-                        className="object-cover group-hover:scale-105 transition-transform duration-500"
+                        className="object-contain rotate-90 scale-[1.35] group-hover:scale-[1.4] transition-transform duration-500"
                       />
                     </div>
                     <div>
@@ -183,7 +207,7 @@ function ProductsContent() {
                     <div className="pt-2">
                       <ul className="grid grid-cols-2 gap-2 text-[10px] font-sans text-walnut/60 bg-cream/50 p-2.5 border border-walnut/5">
                         <li><strong>Thick:</strong> {product.specs["Thickness"] || product.specs["Dimensions"] || "Custom"}</li>
-                        <li><strong>Origin:</strong> {product.specs["Origin"]}</li>
+                        <li><strong>Origin:</strong> {product.specs["Origin"] || "India"}</li>
                       </ul>
                     </div>
                   </div>

@@ -85,8 +85,7 @@ export default function Home() {
     { name: "Premium (Waterproof) Plywood", img: "/categories/premium_waterproof_plywood.jpg", desc: "100% boiling-water waterproof & termite-proof panels" },
     { name: "Commercial Plywood", img: "/categories/commercial_plywood.jpg", desc: "Semi-calibrated & budget wardrobe panels" },
     { name: "Block Boards", img: "/categories/block_boards.jpg", desc: "Strong kiln-dried timber frames" },
-    { name: "Laminates", img: "/categories/laminates.jpg", desc: "Premium textured style embodiment surfaces" },
-    { name: "Decorative Panels", img: "/categories/decorative_panels.jpg", desc: "Acoustic fluted slats & panels" }
+    { name: "Laminates", img: "/categories/laminates.jpg", desc: "Premium textured style embodiment surfaces" }
   ];
 
   const whyChooseUs = [
@@ -128,7 +127,7 @@ export default function Home() {
     { name: "Ligne Roset", id: 6 }
   ];
 
-  const showcaseCategories = ["All", "Premium (Waterproof) Plywood", "Commercial Plywood", "Block Boards", "Laminates", "Decorative Panels"];
+  const showcaseCategories = ["All", "Premium (Waterproof) Plywood", "Commercial Plywood", "Block Boards", "Laminates"];
 
   const filteredShowcase = selectedCategory === "All" 
     ? mockProducts.slice(0, 6) 
@@ -410,7 +409,7 @@ export default function Home() {
                       alt={product.name}
                       fill
                       sizes="(max-width: 768px) 100vw, 33vw"
-                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      className="object-contain rotate-90 scale-[1.35] group-hover:scale-[1.4] transition-transform duration-500"
                     />
                   </div>
                   <div>
@@ -435,7 +434,7 @@ export default function Home() {
                     <ArrowRight size={12} className="group-hover:translate-x-1 transition-transform" />
                   </button>
                   <span className="text-[10px] text-walnut/50 font-sans tracking-wide">
-                    {product.specs["Origin"] || "Select Origin"}
+                    {product.specs["Origin"] || "India"}
                   </span>
                 </div>
               </motion.div>

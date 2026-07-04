@@ -100,13 +100,13 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
           {/* Left: Media & Features */}
           <div className="md:col-span-5 bg-charcoal text-white p-6 sm:p-8 flex flex-col justify-between overflow-y-auto md:max-h-[85vh]">
             <div className="space-y-6">
-              <div className="relative h-48 w-full border border-white/5 overflow-hidden">
+              <div className="relative h-48 w-full border border-white/5 overflow-hidden bg-charcoal">
                 <Image
                   src={product.image}
                   alt={product.name}
                   fill
                   sizes="(max-width: 768px) 100vw, 33vw"
-                  className="object-cover"
+                  className="object-contain rotate-90 scale-[1.35]"
                 />
               </div>
               <div>
