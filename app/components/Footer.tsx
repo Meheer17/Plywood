@@ -44,7 +44,7 @@ export default function Footer() {
             </div>
           </Link>
           <p className="text-sm leading-relaxed text-walnut/60 max-w-sm">
-            Zentree Plywood offers premium boiling-water waterproof plywood, semi-calibrated commercial plywood, block boards, and textured laminates engineered for high-end architecture.
+            Zentree Plywood offers premium boiling-water waterproof plywood, neo-calibrated commercial plywood, block boards, and textured laminates engineered for high-end architecture.
           </p>
           <div className="flex gap-4 pt-2">
             <a href="#" className="w-9 h-9 rounded-full bg-walnut/5 hover:bg-gold hover:text-white flex items-center justify-center transition-all duration-300 text-walnut/75" aria-label="Instagram">

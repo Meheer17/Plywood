@@ -9,9 +9,9 @@ export default function DealersPage() {
       name: "Rohini Plywood & Deco Pannels",
       tagline: "Primary Distributor - South India",
       address: "Rohini Plywood and Deco Pannels, Bangalore, Karnataka, India",
-      phone1: "",
-      phone2: "",
-      whatsapp: "",
+      phone1: "+91 62025 88042",
+      phone2: "+91 63644 45712",
+      whatsapp: "+916364445712",
       hours: "Mon – Sat: 9:00 AM – 7:00 PM (IST)",
       mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.1362799307775!2d77.59247731482194!3d12.971598790856018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0x2029fed3be3d49ec!2sBengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1680000000000!5m2!1sen!2sin",
       features: [

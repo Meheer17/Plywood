@@ -84,7 +84,7 @@ export default function Home() {
 
   const categories = [
     { name: "Premium (Waterproof) Plywood", img: "/categories/premium_waterproof_plywood.jpg", desc: "100% boiling-water waterproof & termite-proof panels" },
-    { name: "Commercial Plywood", img: "/categories/commercial_plywood.jpg", desc: "Semi-calibrated & budget wardrobe panels" },
+    { name: "Commercial Plywood", img: "/categories/commercial_plywood.jpg", desc: "Neo-calibrated & budget wardrobe panels" },
     { name: "Block Boards", img: "/categories/block_boards.jpg", desc: "Strong kiln-dried timber frames" },
     { name: "Laminates", img: "/categories/laminates.jpg", desc: "Premium textured style embodiment surfaces" }
   ];
@@ -257,6 +257,118 @@ export default function Home() {
         </div>
       </section>
 
+            {/* 5. ABOUT SECTION */}
+      <section className="bg-walnut/5 py-24 px-6 md:px-12 w-full">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+
+          {/* Left image */}
+          <div className="lg:col-span-5 relative aspect-[4/5] w-full border border-walnut/10 shadow-xl overflow-hidden group">
+            <Image
+              src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=800"
+              alt="Artisanal Wood Crafting Workshop"
+              fill
+              sizes="(max-width: 768px) 100vw, 40vw"
+              className="object-cover group-hover:scale-105 transition-transform duration-700"
+            />
+            <div className="absolute inset-0 bg-walnut/10 mix-blend-multiply" />
+          </div>
+
+          {/* Right details */}
+          <div className="lg:col-span-7 space-y-8">
+            <div className="space-y-4">
+              <span className="text-gold text-xs font-semibold tracking-widest uppercase">Craft & Heritage</span>
+              <h2 className="font-serif text-3xl md:text-5xl font-light tracking-wide text-walnut leading-tight">
+                Our Story
+              </h2>
+              <div className="w-16 h-[1px] bg-gold" />
+            </div>
+
+            <div className="text-sm text-charcoal/70 leading-relaxed font-sans font-light max-w-2xl space-y-4">
+              <p>
+                Rooted in 50 years of expertise within the plywood and laminate trade, Zentree was conceived to bridge the gap between demand and dependable, high-quality interior solutions.
+              </p>
+              <p>
+                By establishing our ultra-modern manufacturing facility in close proximity to premium raw material sources, we ensure that every product we deliver meets the highest standards of excellence at a competitive value. Our vision is to transcend industry norms and redefine excellence through precision engineering and professional, expert-led execution.
+              </p>
+              <p>
+                At Zentree, we live by the philosophy that quality is not a singular act, but a habit—a standard that is rigorously upheld from the selection of our timber to the final stages of our manufacturing process.
+              </p>
+            </div>
+
+            {/* Counter Grid */}
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 pt-6 border-t border-walnut/10">
+              <div className="space-y-1">
+                <span className="font-serif text-3xl sm:text-4xl text-walnut font-light block">
+                  <AnimatedCounter value="50+" />
+                </span>
+                <span className="text-[10px] font-bold text-walnut/50 uppercase tracking-widest block">Years Experience</span>
+              </div>
+              <div className="space-y-1">
+                <span className="font-serif text-3xl sm:text-4xl text-walnut font-light block">
+                  <AnimatedCounter value="100+" />
+                </span>
+                <span className="text-[10px] font-bold text-walnut/50 uppercase tracking-widest block">Projects Shaped</span>
+              </div>
+              <div className="space-y-1">
+                <span className="font-serif text-3xl sm:text-4xl text-walnut font-light block">
+                  <AnimatedCounter value="10000+" />
+                </span>
+                <span className="text-[10px] font-bold text-walnut/50 uppercase tracking-widest block">Happy Customers</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+            {/* 3. WHY CHOOSE US SECTION */}
+      <section className="bg-white text-charcoal border-y border-walnut/10 py-24 px-6 md:px-12 w-full relative">
+        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-16 items-start">
+
+          <div className="lg:w-1/3 space-y-6 lg:sticky lg:top-32">
+            <span className="text-gold text-xs font-semibold tracking-widest uppercase">Uncompromising Standards</span>
+            <h2 className="font-serif text-3xl md:text-5xl font-light tracking-wide text-walnut leading-tight">
+              Why Architects Trust Zentree
+            </h2>
+            <p className="text-charcoal/70 text-sm leading-relaxed font-light font-sans">
+              From sustainable forestry sourcing to precise mechanical calibrating, our wood panels deliver stability, style, and structure for years to come.
+            </p>
+            <div className="pt-4">
+              <Link
+                href="/contact"
+                className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-gold hover:text-walnut transition-colors duration-300"
+              >
+                Learn About Our Standards <ArrowRight size={14} />
+              </Link>
+            </div>
+          </div>
+
+          <div className="lg:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-12">
+            {whyChooseUs.map((item, idx) => (
+              <motion.div
+                key={item.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: idx * 0.1 }}
+                className="space-y-4 border-l border-gold/20 pl-6 py-1"
+              >
+                <div className="w-10 h-10 rounded-full bg-walnut/5 flex items-center justify-center">
+                  {item.icon}
+                </div>
+                <h3 className="font-serif text-lg font-light tracking-wide text-walnut">
+                  {item.title}
+                </h3>
+                <p className="text-charcoal/60 text-xs leading-relaxed font-sans font-light">
+                  {item.desc}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+
+        </div>
+      </section>
+
       {/* 2. FEATURED CATEGORIES SECTION */}
       <section className="py-24 px-6 md:px-12 max-w-7xl mx-auto w-full">
         <div className="flex flex-col items-start gap-4 mb-16">
@@ -310,53 +422,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 3. WHY CHOOSE US SECTION */}
-      <section className="bg-white text-charcoal border-y border-walnut/10 py-24 px-6 md:px-12 w-full relative">
-        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-16 items-start">
-
-          <div className="lg:w-1/3 space-y-6 lg:sticky lg:top-32">
-            <span className="text-gold text-xs font-semibold tracking-widest uppercase">Uncompromising Standards</span>
-            <h2 className="font-serif text-3xl md:text-5xl font-light tracking-wide text-walnut leading-tight">
-              Why Architects Trust Zentree
-            </h2>
-            <p className="text-charcoal/70 text-sm leading-relaxed font-light font-sans">
-              From sustainable forestry sourcing to precise mechanical calibrating, our wood panels deliver stability, style, and structure for years to come.
-            </p>
-            <div className="pt-4">
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-gold hover:text-walnut transition-colors duration-300"
-              >
-                Learn About Our Standards <ArrowRight size={14} />
-              </Link>
-            </div>
-          </div>
-
-          <div className="lg:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-12">
-            {whyChooseUs.map((item, idx) => (
-              <motion.div
-                key={item.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className="space-y-4 border-l border-gold/20 pl-6 py-1"
-              >
-                <div className="w-10 h-10 rounded-full bg-walnut/5 flex items-center justify-center">
-                  {item.icon}
-                </div>
-                <h3 className="font-serif text-lg font-light tracking-wide text-walnut">
-                  {item.title}
-                </h3>
-                <p className="text-charcoal/60 text-xs leading-relaxed font-sans font-light">
-                  {item.desc}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-
-        </div>
-      </section>
 
       {/* 4. PRODUCT SHOWCASE */}
       <section className="py-24 px-6 md:px-12 max-w-7xl mx-auto w-full">
@@ -444,70 +509,6 @@ export default function Home() {
             ))}
           </AnimatePresence>
         </motion.div>
-      </section>
-
-      {/* 5. ABOUT SECTION */}
-      <section className="bg-walnut/5 py-24 px-6 md:px-12 w-full">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-
-          {/* Left image */}
-          <div className="lg:col-span-5 relative aspect-[4/5] w-full border border-walnut/10 shadow-xl overflow-hidden group">
-            <Image
-              src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=800"
-              alt="Artisanal Wood Crafting Workshop"
-              fill
-              sizes="(max-width: 768px) 100vw, 40vw"
-              className="object-cover group-hover:scale-105 transition-transform duration-700"
-            />
-            <div className="absolute inset-0 bg-walnut/10 mix-blend-multiply" />
-          </div>
-
-          {/* Right details */}
-          <div className="lg:col-span-7 space-y-8">
-            <div className="space-y-4">
-              <span className="text-gold text-xs font-semibold tracking-widest uppercase">Craft & Heritage</span>
-              <h2 className="font-serif text-3xl md:text-5xl font-light tracking-wide text-walnut leading-tight">
-                Our Story
-              </h2>
-              <div className="w-16 h-[1px] bg-gold" />
-            </div>
-
-            <div className="text-sm text-charcoal/70 leading-relaxed font-sans font-light max-w-2xl space-y-4">
-              <p>
-                Rooted in 50 years of expertise within the plywood and laminate trade, Zentree was conceived to bridge the gap between demand and dependable, high-quality interior solutions.
-              </p>
-              <p>
-                By establishing our ultra-modern manufacturing facility in close proximity to premium raw material sources, we ensure that every product we deliver meets the highest standards of excellence at a competitive value. Our vision is to transcend industry norms and redefine excellence through precision engineering and professional, expert-led execution.
-              </p>
-              <p>
-                At Zentree, we live by the philosophy that quality is not a singular act, but a habit—a standard that is rigorously upheld from the selection of our timber to the final stages of our manufacturing process.
-              </p>
-            </div>
-
-            {/* Counter Grid */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 pt-6 border-t border-walnut/10">
-              <div className="space-y-1">
-                <span className="font-serif text-3xl sm:text-4xl text-walnut font-light block">
-                  <AnimatedCounter value="50+" />
-                </span>
-                <span className="text-[10px] font-bold text-walnut/50 uppercase tracking-widest block">Years Experience</span>
-              </div>
-              <div className="space-y-1">
-                <span className="font-serif text-3xl sm:text-4xl text-walnut font-light block">
-                  <AnimatedCounter value="100+" />
-                </span>
-                <span className="text-[10px] font-bold text-walnut/50 uppercase tracking-widest block">Projects Shaped</span>
-              </div>
-              <div className="space-y-1">
-                <span className="font-serif text-3xl sm:text-4xl text-walnut font-light block">
-                  <AnimatedCounter value="10000+" />
-                </span>
-                <span className="text-[10px] font-bold text-walnut/50 uppercase tracking-widest block">Happy Customers</span>
-              </div>
-            </div>
-          </div>
-
-        </div>
       </section>
 
       {/* 5.5. AUTHORIZED DEALERS SECTION */}

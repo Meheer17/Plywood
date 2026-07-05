@@ -4,19 +4,21 @@
     "name": "Zentree Ultima WP Ply",
     "category": "Premium (Waterproof) Plywood",
     "image": "/Zentree_Ultima.jpeg",
-    "description": "Boiling Water Proof (BWP) grade, high-density, calibrated plywood made from 100% Gurjan and Nilgiri (Eucalyptus). Borer and termite-proof, featuring equal thickness on all four sides, and includes a lifetime warranty.",
+    "description": "The Ultimate Benchmark — When your project demands perfection, settle for nothing less than Zentree Ultima. Designed for those who refuse to compromise, our flagship BWP-grade plywood is the gold standard for long-term structural integrity. Crafted from a premium fusion of 100% Gurjan and Nilgiri timber, every board is double-calibrated to ensure flawless consistency. The signature 4-stage pressing process creates an ultra-high-density core that is fully immune to termites and borers. With near-zero core gaps and exacting thickness tolerances, Zentree Ultima isn't just a material—it’s an investment. Backed by a lifetime warranty, it is the last word in strength for the spaces you care about most.",
     "specs": {
       "Thickness": "6mm, 9mm, 12mm, 16mm, 19mm",
       "Sizes": "8x4, 7x4",
       "Grade": "BWP (Boiling Water Proof)",
       "Wood Species": "100% Gurjan and Nilgiri (Eucalyptus)",
+      "Calibration": "Double-Calibrated",
       "Warranty": "Lifetime Warranty",
       "Protection": "Borer & Termite Proof"
     },
     "features": [
       "100% Gurjan & Nilgiri core composition",
-      "Borer and termite-proof formulation",
-      "Calibrated for equal thickness on all four sides",
+      "Double-calibrated for flawless consistency",
+      "Signature 4-stage pressing process for ultra-high-density core",
+      "Termite, borer proof and near-zero core gaps",
       "Lifetime replacement warranty"
     ]
   },
@@ -25,7 +27,7 @@
     "name": "Zentree Gold WP Ply",
     "category": "Premium (Waterproof) Plywood",
     "image": "/Zentree_Gold.jpeg",
-    "description": "Premium waterproof plywood featuring a signature red core, engineered to be borer and termite-proof. Composed of a durable blend of Neem, Gurjan, and Nilgiri, it is highly recommended for both kitchen and wardrobe cabinets.",
+    "description": "Versatility Meets Strength — Your home is your sanctuary—don’t settle for anything less than uncompromising durability. Engineered with a premium red core and a cutting-edge, borer-and-termite-free formulation, Zentree Gold WP Ply is built to withstand the toughest household environments. Whether it’s the constant humidity of a high-traffic kitchen or the heavy-duty demands of bespoke wardrobes, our unique blend of Neem, Gurjan, and Nilgiri ensures your furniture remains as pristine as the day it was installed. Invest in the foundation your home deserves.",
     "specs": {
       "Thickness": "6mm to 19mm",
       "Sizes": "8x4, 7x4",
@@ -35,32 +37,32 @@
       "Protection": "Borer & Termite Proof"
     },
     "features": [
-      "Signature Red Core for quality assurance",
+      "Premium Red Core for visual quality assurance",
       "100% borer and termite-proof protection",
-      "Optimized for high-moisture kitchen and wardrobe areas",
-      "Constructed from durable Neem, Gurjan & Nilgiri species"
+      "Engineered for high-moisture kitchens & bespoke wardrobes",
+      "Durable blend of Neem, Gurjan, and Nilgiri (Eucalyptus)"
     ]
   },
   {
     "id": "ply-zt-gurjan",
-    "name": "Zentree Gurjan Com Ply",
+    "name": "Zentree Neem Gurjan Com Ply",
     "category": "Commercial Plywood",
     "image": "/Zentree_Gurjan.jpeg",
-    "description": "Semi-calibrated commercial plywood constructed using 100% premium Neem and Gurjan wood. Designed to offer full thickness strength, making it the perfect choice for wardrobes and bedroom cabinets.",
+    "description": "The Premium Standard — Elevate your home interiors with the precision of our neo-calibrated Neem-Gurjan plywood. Expertly engineered from a high-performance blend of 100% select Neem and Gurjan timber, these boards marry the raw strength of Gurjan with the superior, pest-resistant durability of Neem. Specifically designed for elegant, high-end wardrobes and cabinetry, our consistent, full-thickness construction ensures a flawless finish and lasting stability. Choose the plywood that sets the benchmark for your most refined projects.",
     "specs": {
       "Thickness": "6mm to 18mm",
       "Sizes": "8x4, 7x4",
       "Grade": "Commercial MR Grade",
-      "Wood Species": "100% Neem and Gurjan",
-      "Calibration": "Semi-Calibrated",
-      "Recommended For": "Wardrobes & Cabinets",
+      "Wood Species": "100% select Neem and Gurjan",
+      "Calibration": "Neo-Calibrated",
+      "Recommended For": "Elegant Wardrobes & Cabinets",
       "Origin": "India"
     },
     "features": [
-      "100% Neem and Gurjan composition",
-      "Semi-calibrated for enhanced flatness",
-      "Full thickness profile for superior load-bearing",
-      "Ideal for premium wardrobes"
+      "100% select Neem & Gurjan composition",
+      "Neo-calibrated for exceptional flatness",
+      "Consistent full-thickness profile for superior load-bearing",
+      "Ideal for elegant wardrobes & cabinetry"
     ]
   },
   {
@@ -68,7 +70,7 @@
     "name": "Zentree Project Com Ply",
     "category": "Commercial Plywood",
     "image": "/Zentree_Project.jpeg",
-    "description": "This plywood is a budget option constructed using a mix of Neem and other species, featuring full thickness. It is intended for wardrobe applications and is available in thicknesses from 6mm to 18mm. It comes in 8x4 and 7x4 sheet sizes.",
+    "description": "Optimization Without Compromise — When scaling a project, consistency is your greatest asset. Zentree Project Com Ply delivers the ideal convergence of value and durability, specifically designed for high-performance interior builds. With uniform thickness and reliable structural integrity, our boards ensure a seamless finish and lasting strength for every wardrobe project. Choose the ply that supports your design vision and your bottom line.",
     "specs": {
       "Thickness": "6mm to 18mm",
       "Sizes": "8x4, 7x4",
@@ -79,9 +81,9 @@
       "Origin": "India"
     },
     "features": [
-      "Constructed using a mix of Neem & other species",
-      "Full thickness profile for budget cabinets",
-      "Highly cost-effective wardrobe solution",
+      "Optimized blend of Neem & select hardwood",
+      "Uniform thickness and structural integrity",
+      "Ideal convergence of value and durability",
       "Available in standard 8x4 and 7x4 sheet sizes"
     ]
   },

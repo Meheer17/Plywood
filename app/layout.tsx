@@ -19,8 +19,8 @@ const sansFont = Plus_Jakarta_Sans({
 
 export const metadata: Metadata = {
   title: "Zentree Plywood | Premium Waterproof & Commercial Plywood",
-  description: "Zentree Plywood offers premium BWP waterproof plywood, semi-calibrated commercial plywood and laminates for luxury and durable interiors.",
-  keywords: ["Zentree Plywood", "Poetry Plywood LLP", "Zentree Ultima WP Ply", "Zentree Gold WP Ply", "commercial plywood", "waterproof plywood", "laminates", "MDF boards"],
+  description: "Zentree Plywood offers premium BWP waterproof plywood, neo-calibrated commercial plywood, and premium laminates for luxury and durable interiors.",
+  keywords: ["Zentree Plywood", "Poetry Plywood LLP", "Zentree Ultima WP Ply", "Zentree Gold WP Ply", "Zentree Neem Gurjan Com Ply", "Zentree Project Com Ply", "commercial plywood", "waterproof plywood", "laminates", "MDF boards"],
   authors: [{ name: "Zentree Plywood" }],
 };
 
