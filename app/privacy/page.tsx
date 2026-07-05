@@ -22,7 +22,7 @@ export default function PrivacyPage() {
       <section className="max-w-4xl mx-auto px-6 md:px-12">
         <div className="bg-white p-8 sm:p-12 border border-walnut/10 shadow-sm space-y-8">
           <p className="text-xs text-walnut/50">Last updated: July 2026</p>
-          
+
           <div className="space-y-4">
             <h2 className="font-serif text-2xl text-walnut font-light">1. Information We Collect</h2>
             <p className="text-sm text-charcoal/70 leading-relaxed font-light">
@@ -37,7 +37,7 @@ export default function PrivacyPage() {
           <div className="space-y-4">
             <h2 className="font-serif text-2xl text-walnut font-light">2. How We Use Your Information</h2>
             <p className="text-sm text-charcoal/70 leading-relaxed font-light">
-              Rohini Plywood and Deco Panel is the authorized sales partner and distributor for Zentree. We use your information solely to:
+              Zentree Plywood (Poetry Plywood LLP) is committed to protecting your privacy. We use your information solely to:
             </p>
             <ul className="list-disc pl-5 text-sm text-charcoal/70 font-light space-y-2">
               <li>Process and respond to your product inquiries and requests for quotes.</li>
@@ -69,9 +69,7 @@ export default function PrivacyPage() {
               If you have any questions about this Privacy Policy, please contact us at:
             </p>
             <div className="bg-cream/50 p-4 border border-walnut/5 text-sm text-charcoal/80 space-y-1">
-              <p><strong>Rohini Plywood & Deco Panel</strong></p>
-              <p>Bangalore, Karnataka, India</p>
-              <p>Phone/WhatsApp: +91 63644 45712</p>
+              <p>Please submit your inquiry through the contact form on our website, and our team will get in touch with you.</p>
             </div>
           </div>
         </div>

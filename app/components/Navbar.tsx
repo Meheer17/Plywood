@@ -38,6 +38,7 @@ export default function Navbar() {
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "Collection", href: "/products" },
+    { name: "Dealers", href: "/dealers" },
     { name: "Contact", href: "/contact" },
   ];
 
@@ -114,7 +115,7 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile Menu Panel */}
+      {/* Mobile Menu Pannels */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
@@ -131,9 +132,8 @@ export default function Navbar() {
                     key={link.href}
                     href={link.href}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className={`text-sm tracking-widest uppercase font-medium py-1 transition-colors ${
-                      isActive ? "text-gold" : "text-walnut/70 hover:text-walnut"
-                    }`}
+                    className={`text-sm tracking-widest uppercase font-medium py-1 transition-colors ${isActive ? "text-gold" : "text-walnut/70 hover:text-walnut"
+                      }`}
                   >
                     {link.name}
                   </Link>

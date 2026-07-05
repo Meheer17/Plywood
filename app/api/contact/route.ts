@@ -62,7 +62,7 @@ export async function POST(request: Request) {
           <div style="background-color: #ffffff; padding: 15px; border-left: 4px solid #8C6239; border-radius: 4px; box-shadow: inset 0 1px 3px rgba(0,0,0,0.05); white-space: pre-wrap; font-size: 14px; line-height: 1.5; color: #444;">${message || "No message provided."}</div>
           
           <hr style="border: 0; border-top: 1px solid #e0e0e0; margin: 25px 0;" />
-          <p style="font-size: 11px; color: #999; text-align: center; margin: 0;">This email was automatically generated from the Rohini Plywood & Deco Panel website contact portal.</p>
+          <p style="font-size: 11px; color: #999; text-align: center; margin: 0;">This email was automatically generated from the Zentree Plywood website contact portal.</p>
         </div>
       `;
     } else {
@@ -94,7 +94,7 @@ export async function POST(request: Request) {
           <div style="background-color: #ffffff; padding: 15px; border-left: 4px solid #8C6239; border-radius: 4px; box-shadow: inset 0 1px 3px rgba(0,0,0,0.05); white-space: pre-wrap; font-size: 14px; line-height: 1.5; color: #444;">${message || "No message provided."}</div>
           
           <hr style="border: 0; border-top: 1px solid #e0e0e0; margin: 25px 0;" />
-          <p style="font-size: 11px; color: #999; text-align: center; margin: 0;">This email was automatically generated from the Rohini Plywood & Deco Panel contact portal.</p>
+          <p style="font-size: 11px; color: #999; text-align: center; margin: 0;">This email was automatically generated from the Zentree Plywood contact portal.</p>
         </div>
       `;
     }

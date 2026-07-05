@@ -13,7 +13,7 @@ export default function TermsPage() {
             Terms of Service
           </h1>
           <p className="text-white/60 text-sm max-w-xl font-light">
-            Welcome to Rohini Plywood and Deco Panel. Please read these terms carefully before using our website and services.
+            Welcome to Zentree Plywood. Please read these terms carefully before using our website and services.
           </p>
         </div>
       </section>
@@ -31,16 +31,16 @@ export default function TermsPage() {
           </div>
 
           <div className="space-y-4">
-            <h2 className="font-serif text-2xl text-walnut font-light">2. Distributor Status & Service Scope</h2>
+            <h2 className="font-serif text-2xl text-walnut font-light">2. Website Purpose & Scope</h2>
             <p className="text-sm text-charcoal/70 leading-relaxed font-light">
-              Rohini Plywood and Deco Panel is an authorized sales partner and distributor of the Zentree brand. The information, catalogs, and options provided on this website are for preliminary sourcing and consultation purposes. Final product specifications, pricing, deliveries, and warranties are subject to physical contracts and invoices signed directly between Rohini Plywood and the customer.
+              This website provides information, product catalogs, and specifications for Zentree Plywood. Products are available through our network of authorized sales partners and distributors. Final specifications, pricing, delivery times, and product warranties are subject to the physical invoices and contracts signed at the time of purchase.
             </p>
           </div>
 
           <div className="space-y-4">
             <h2 className="font-serif text-2xl text-walnut font-light">3. Use of Website Materials</h2>
             <p className="text-sm text-charcoal/70 leading-relaxed font-light">
-              All content on this website, including logos, designs, text, catalog descriptions, and images, is the intellectual property of Zentree, Rohini Plywood and Deco Panel, or their respective owners. You may not copy, reproduce, republish, or distribute any materials without prior written consent.
+              All content on this website, including logos, designs, text, catalog descriptions, and images, is the intellectual property of Zentree Plywood (Poetry Plywood LLP) or its content suppliers. You may not copy, reproduce, republish, or distribute any materials without prior written consent.
             </p>
           </div>
 
@@ -54,7 +54,7 @@ export default function TermsPage() {
           <div className="space-y-4">
             <h2 className="font-serif text-2xl text-walnut font-light">5. Limitation of Liability</h2>
             <p className="text-sm text-charcoal/70 leading-relaxed font-light">
-              In no event shall Rohini Plywood and Deco Panel or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on this website.
+              In no event shall Zentree Plywood or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on this website.
             </p>
           </div>
 

@@ -4,8 +4,8 @@ import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { 
-  ArrowRight, ShieldCheck, Droplet, Bug, Leaf, Award, 
+import {
+  ArrowRight, ShieldCheck, Droplet, Bug, Leaf, Award,
   ChevronLeft, ChevronRight, Star, Quote, Phone, HelpCircle, X
 } from "lucide-react";
 import rawProducts from "@/app/data/products.json";
@@ -61,7 +61,7 @@ function AnimatedCounter({ value, duration = 1.5 }: { value: string; duration?: 
       frame++;
       const progress = frame / totalFrames;
       const currentCount = Math.floor(end * (1 - (1 - progress) * (1 - progress)));
-      
+
       if (frame >= totalFrames) {
         setCount(end);
         clearInterval(counter);
@@ -100,7 +100,7 @@ export default function Home() {
 
   const testimonials = [
     {
-      text: "The quality of the smoked walnut veneers from Zentree's distributor is unmatched. We used them in our latest penthouse project, and the depth of natural wood grain exceeded our clients' expectations.",
+      text: "The quality of the smoked walnut Plywood from Zentree's distributor is unmatched. We used them in our latest penthouse project, and the depth of natural wood grain exceeded our clients' expectations.",
       name: "Marcus Vance",
       role: "Principal Architect, Vance & Partners",
       avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=120"
@@ -112,7 +112,7 @@ export default function Home() {
       avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=120"
     },
     {
-      text: "We sourced custom curved timber baffles from Rohini Plywood and Deco Panel. Their Zentree engineering precision, scheduling, and craftsmanship were truly world-class.",
+      text: "We sourced custom curved timber baffles from Zentree's authorized dealer. Their engineering precision, scheduling, and craftsmanship were truly world-class.",
       name: "David Cho",
       role: "Senior Construction Manager, BuildCorp",
       avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=120"
@@ -130,8 +130,8 @@ export default function Home() {
 
   const showcaseCategories = ["All", "Premium (Waterproof) Plywood", "Commercial Plywood", "Block Boards", "Laminates"];
 
-  const filteredShowcase = selectedCategory === "All" 
-    ? mockProducts.slice(0, 6) 
+  const filteredShowcase = selectedCategory === "All"
+    ? mockProducts.slice(0, 6)
     : mockProducts.filter(p => p.category === selectedCategory);
 
   const nextTestimonial = () => {
@@ -144,7 +144,7 @@ export default function Home() {
 
   return (
     <div className="flex flex-col w-full bg-cream text-charcoal font-sans overflow-hidden">
-      
+
       {/* 1. HERO SECTION */}
       <section className="relative h-screen flex items-center justify-center bg-walnut overflow-hidden select-none">
         {/* Parallax / Animated Wood texture background */}
@@ -220,7 +220,7 @@ export default function Home() {
               Crafting Spaces with <span className="italic font-light text-gold text-stroke-gold">Premium Wood</span>
             </h1>
             <p className="text-white/70 text-sm sm:text-lg max-w-2xl mx-auto font-light leading-relaxed">
-              Exceptional plywood, veneers, laminates, and wood solutions trusted by architects, interior designers, and premium builders.
+              Exceptional plywood, laminates, and wood solutions trusted by architects, interior designers, and premium builders.
             </p>
           </motion.div>
 
@@ -234,7 +234,7 @@ export default function Home() {
               href="/products"
               className="w-full sm:w-auto px-8 py-4 bg-gold hover:bg-white text-walnut font-semibold text-xs tracking-widest uppercase transition-all duration-300 flex items-center justify-center gap-2 group cursor-pointer"
             >
-              Explore Collection 
+              Explore Collection
               <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link
@@ -276,7 +276,7 @@ export default function Home() {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6, delay: idx * 0.1 }}
             >
-              <Link 
+              <Link
                 href={`/products?category=${encodeURIComponent(cat.name)}`}
                 className="group block relative aspect-[4/5] overflow-hidden border border-walnut/10 bg-charcoal"
               >
@@ -313,7 +313,7 @@ export default function Home() {
       {/* 3. WHY CHOOSE US SECTION */}
       <section className="bg-white text-charcoal border-y border-walnut/10 py-24 px-6 md:px-12 w-full relative">
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-16 items-start">
-          
+
           <div className="lg:w-1/3 space-y-6 lg:sticky lg:top-32">
             <span className="text-gold text-xs font-semibold tracking-widest uppercase">Uncompromising Standards</span>
             <h2 className="font-serif text-3xl md:text-5xl font-light tracking-wide text-walnut leading-tight">
@@ -323,7 +323,7 @@ export default function Home() {
               From sustainable forestry sourcing to precise mechanical calibrating, our wood panels deliver stability, style, and structure for years to come.
             </p>
             <div className="pt-4">
-              <Link 
+              <Link
                 href="/contact"
                 className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-gold hover:text-walnut transition-colors duration-300"
               >
@@ -375,11 +375,10 @@ export default function Home() {
               <button
                 key={cat}
                 onClick={() => setSelectedCategory(cat)}
-                className={`px-4 py-2 text-xs font-medium uppercase tracking-wider transition-all duration-300 border rounded-none cursor-pointer ${
-                  selectedCategory === cat
-                    ? "bg-walnut text-white border-walnut"
-                    : "bg-transparent text-walnut/60 border-walnut/15 hover:border-walnut/40 hover:text-walnut"
-                }`}
+                className={`px-4 py-2 text-xs font-medium uppercase tracking-wider transition-all duration-300 border rounded-none cursor-pointer ${selectedCategory === cat
+                  ? "bg-walnut text-white border-walnut"
+                  : "bg-transparent text-walnut/60 border-walnut/15 hover:border-walnut/40 hover:text-walnut"
+                  }`}
               >
                 {cat === "All" ? "All Products" : cat}
               </button>
@@ -388,7 +387,7 @@ export default function Home() {
         </div>
 
         {/* Product Grid */}
-        <motion.div 
+        <motion.div
           layout
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
@@ -404,7 +403,7 @@ export default function Home() {
                 className="group flex flex-col justify-between border border-walnut/10 bg-white p-4 shadow-sm"
               >
                 <div className="space-y-4">
-                  <div 
+                  <div
                     onClick={() => setLightboxImage(product.image)}
                     className="relative aspect-[4/3] w-full overflow-hidden bg-cream border border-walnut/5 cursor-zoom-in"
                   >
@@ -450,7 +449,7 @@ export default function Home() {
       {/* 5. ABOUT SECTION */}
       <section className="bg-walnut/5 py-24 px-6 md:px-12 w-full">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-          
+
           {/* Left image */}
           <div className="lg:col-span-5 relative aspect-[4/5] w-full border border-walnut/10 shadow-xl overflow-hidden group">
             <Image
@@ -468,14 +467,14 @@ export default function Home() {
             <div className="space-y-4">
               <span className="text-gold text-xs font-semibold tracking-widest uppercase">Craft & Heritage</span>
               <h2 className="font-serif text-3xl md:text-5xl font-light tracking-wide text-walnut leading-tight">
-                Rooted in generations <br />of expertise
+                Our Story
               </h2>
               <div className="w-16 h-[1px] bg-gold" />
             </div>
 
             <div className="text-sm text-charcoal/70 leading-relaxed font-sans font-light max-w-2xl space-y-4">
               <p>
-                Rooted in generations of expertise within the plywood and laminate trade, Zentree was conceived to bridge the gap between demand and dependable, high-quality interior solutions.
+                Rooted in 50 years of expertise within the plywood and laminate trade, Zentree was conceived to bridge the gap between demand and dependable, high-quality interior solutions.
               </p>
               <p>
                 By establishing our ultra-modern manufacturing facility in close proximity to premium raw material sources, we ensure that every product we deliver meets the highest standards of excellence at a competitive value. Our vision is to transcend industry norms and redefine excellence through precision engineering and professional, expert-led execution.
@@ -489,13 +488,13 @@ export default function Home() {
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 pt-6 border-t border-walnut/10">
               <div className="space-y-1">
                 <span className="font-serif text-3xl sm:text-4xl text-walnut font-light block">
-                  <AnimatedCounter value="25+" />
+                  <AnimatedCounter value="50+" />
                 </span>
                 <span className="text-[10px] font-bold text-walnut/50 uppercase tracking-widest block">Years Experience</span>
               </div>
               <div className="space-y-1">
                 <span className="font-serif text-3xl sm:text-4xl text-walnut font-light block">
-                  <AnimatedCounter value="5000+" />
+                  <AnimatedCounter value="100+" />
                 </span>
                 <span className="text-[10px] font-bold text-walnut/50 uppercase tracking-widest block">Projects Shaped</span>
               </div>
@@ -504,12 +503,6 @@ export default function Home() {
                   <AnimatedCounter value="10000+" />
                 </span>
                 <span className="text-[10px] font-bold text-walnut/50 uppercase tracking-widest block">Happy Customers</span>
-              </div>
-              <div className="space-y-1">
-                <span className="font-serif text-3xl sm:text-4xl text-walnut font-light block">
-                  <AnimatedCounter value="100+" />
-                </span>
-                <span className="text-[10px] font-bold text-walnut/50 uppercase tracking-widest block">Wood Variants</span>
               </div>
             </div>
           </div>
@@ -521,47 +514,48 @@ export default function Home() {
       <section className="py-24 px-6 md:px-12 bg-walnut/5 text-charcoal w-full">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           <div className="lg:col-span-6 space-y-6">
-            <span className="text-gold text-xs font-semibold tracking-widest uppercase">Find Your Authorized Dealer</span>
+            <span className="text-gold text-xs font-semibold tracking-widest uppercase">Our Retail Network</span>
             <h2 className="font-serif text-3xl md:text-5xl font-light tracking-wide text-walnut leading-tight">
-              Authorized Sales Partner & Distributor
+              Authorized Dealer Network
             </h2>
             <p className="text-charcoal/70 text-sm leading-relaxed font-light max-w-xl">
-              Zentree products are available through our network of authorized sales experts. Our premier partner and distributor, Rohini Plywood and Deco Panel, provides professional sourcing, specification consultancy, and logistics support for residential and commercial interior projects.
+              Zentree premium products are distributed through our selected network of authorized sales experts. Our partners provide professional sourcing, project estimation, specification consultancy, and logistics support for your interior projects.
             </p>
             <div className="pt-4">
-              <Link 
-                href="/contact"
-                className="px-6 py-3.5 bg-gold hover:bg-walnut text-walnut hover:text-white font-semibold text-xs tracking-widest uppercase transition-all duration-300 inline-flex items-center gap-2 group"
+              <Link
+                href="/dealers"
+                className="px-8 py-4 bg-gold hover:bg-walnut text-walnut hover:text-white font-semibold text-xs tracking-widest uppercase transition-all duration-300 inline-flex items-center gap-2 group cursor-pointer"
               >
-                Inquire with Dealer <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+                Find Nearest Dealer <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
           </div>
-          
+
           <div className="lg:col-span-6 bg-white border border-walnut/15 p-8 sm:p-10 space-y-6 shadow-sm">
-            <span className="text-gold text-xs font-semibold tracking-wider uppercase block">Featured Distributor</span>
-            <h3 className="font-serif text-2xl font-light text-walnut">Rohini Plywood & Deco Panel</h3>
-            
-            <div className="space-y-4 text-sm text-charcoal/70">
-              <div className="flex items-start gap-3">
-                <span className="w-1.5 h-1.5 rounded-full bg-gold shrink-0 mt-2"></span>
-                <p><strong>Primary Sourcing Hub:</strong> Bangalore, Karnataka, India</p>
+            <span className="text-gold text-xs font-semibold tracking-wider uppercase block">Regional Distribution Partners</span>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div className="border-b border-walnut/10 pb-3 sm:pb-0">
+                <h4 className="font-serif text-base font-light text-walnut leading-tight">Rohini Plywood & Deco Pannels</h4>
+                <p className="text-[10px] text-charcoal/50 mt-0.5">Bangalore, Karnataka, India</p>
+                <p className="text-[10px] text-gold font-semibold mt-0.5">Primary Distributor</p>
               </div>
-              <div className="flex items-start gap-3">
-                <span className="w-1.5 h-1.5 rounded-full bg-gold shrink-0 mt-2"></span>
-                <p><strong>Offerings:</strong> Full Zentree plywood lines, custom architectural veneers and laminates.</p>
+              <div className="border-b border-walnut/10 pb-3 sm:pb-0 sm:border-b-0">
+                <h4 className="font-serif text-base font-light text-walnut leading-tight">Plywood Emporium</h4>
+                <p className="text-[10px] text-charcoal/50 mt-0.5">Puducherry, India</p>
+                <p className="text-[10px] text-gold font-semibold mt-0.5">Authorized Dealer</p>
               </div>
-              <div className="flex items-start gap-3">
-                <span className="w-1.5 h-1.5 rounded-full bg-gold shrink-0 mt-2"></span>
-                <p><strong>Services:</strong> Wholesale supply, project estimation, size customization, and doorstep delivery.</p>
+              <div className="sm:border-b-0">
+                <h4 className="font-serif text-base font-light text-walnut leading-tight">Deepam Plywoods</h4>
+                <p className="text-[10px] text-charcoal/50 mt-0.5">Chennai, Tamil Nadu, India</p>
+                <p className="text-[10px] text-gold font-semibold mt-0.5">Authorized Dealer</p>
               </div>
             </div>
-            
-            <div className="pt-4 border-t border-walnut/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-              <div>
-                <span className="text-[10px] text-charcoal/40 block uppercase tracking-widest">Direct Contact</span>
-                <span className="text-sm font-semibold text-walnut font-sans">+91 62025 88042, +91 63644 45712</span>
-              </div>
+
+            <div className="pt-4 border-t border-walnut/10">
+              <p className="text-xs text-charcoal/50 font-light">
+                Visit our full dealers page to check store hours, interactive map locations, and contact options.
+              </p>
             </div>
           </div>
         </div>
@@ -647,27 +641,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 7. BRANDS WE DEAL WITH */}
-      <section className="bg-white text-charcoal py-16 px-6 md:px-12 border-t border-b border-walnut/10 w-full">
-        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12">
-          <div className="text-center lg:text-left lg:max-w-xs space-y-2">
-            <span className="text-gold text-[10px] tracking-widest font-semibold uppercase block">Collaborative Network</span>
-            <h3 className="font-serif text-lg tracking-wide font-light text-walnut">Trusted by Global Furnishing Brands</h3>
-          </div>
-
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-x-12 gap-y-8 w-full max-w-3xl justify-items-center items-center">
-            {partners.map((p) => (
-              <span
-                key={p.id}
-                className="font-serif text-sm tracking-[0.3em] font-light text-walnut/30 hover:text-gold transition-all duration-300 cursor-default uppercase"
-              >
-                {p.name}
-              </span>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* 8. CONTACT CTA SECTION */}
       <section className="relative py-28 px-6 md:px-12 bg-cream overflow-hidden text-center text-charcoal w-full select-none border-t border-walnut/10">
         <div className="absolute inset-0 z-0">
@@ -696,12 +669,12 @@ export default function Home() {
             >
               Get a Quote <ArrowRight size={14} />
             </Link>
-            <a
-              href="tel:+919741767564"
+            <Link
+              href="/dealers"
               className="w-full sm:w-auto px-8 py-4 bg-transparent border border-walnut/20 hover:border-gold hover:text-gold text-walnut font-semibold text-xs tracking-widest uppercase transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
             >
-              <Phone size={14} /> Call Sales Partner
-            </a>
+              <Phone size={14} /> View Dealers
+            </Link>
           </div>
         </div>
       </section>
@@ -712,7 +685,7 @@ export default function Home() {
       {/* Lightbox Modal for Full Image View */}
       <AnimatePresence>
         {lightboxImage && (
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -720,16 +693,16 @@ export default function Home() {
             onClick={() => setLightboxImage(null)}
           >
             {/* Close button */}
-            <button 
+            <button
               className="absolute top-6 right-6 text-white hover:text-gold transition-colors p-2.5 bg-white/10 border border-white/10 cursor-pointer"
               onClick={() => setLightboxImage(null)}
               aria-label="Close image preview"
             >
               <X size={20} />
             </button>
-            
+
             {/* Image Box */}
-            <motion.div 
+            <motion.div
               initial={{ scale: 0.9, y: 10 }}
               animate={{ scale: 1, y: 0 }}
               exit={{ scale: 0.9, y: 10 }}
@@ -737,9 +710,9 @@ export default function Home() {
               className="relative max-w-full max-h-[85vh]"
               onClick={(e) => e.stopPropagation()}
             >
-              <img 
-                src={lightboxImage} 
-                alt="Plywood product detail" 
+              <img
+                src={lightboxImage}
+                alt="Plywood product detail"
                 className="max-w-full max-h-[85vh] object-contain shadow-2xl border border-white/10"
               />
             </motion.div>

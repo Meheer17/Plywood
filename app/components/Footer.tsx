@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, ArrowRight } from "lucide-react";
 
 export default function Footer() {
   const categories = [
@@ -13,6 +13,7 @@ export default function Footer() {
   const quickLinks = [
     { name: "Home", href: "/" },
     { name: "Collection", href: "/products" },
+    { name: "Dealers", href: "/dealers" },
     { name: "Contact", href: "/contact" }
   ];
 
@@ -43,7 +44,7 @@ export default function Footer() {
             </div>
           </Link>
           <p className="text-sm leading-relaxed text-walnut/60 max-w-sm">
-            Authorized sales partner and distributor: Rohini Plywood and Deco Panel. Offering premium Zentree waterproof and commercial plywood, laminates, veneers, and wood solutions.
+            Zentree Plywood offers premium boiling-water waterproof plywood, semi-calibrated commercial plywood, block boards, and textured laminates engineered for high-end architecture.
           </p>
           <div className="flex gap-4 pt-2">
             <a href="#" className="w-9 h-9 rounded-full bg-walnut/5 hover:bg-gold hover:text-white flex items-center justify-center transition-all duration-300 text-walnut/75" aria-label="Instagram">
@@ -61,12 +62,12 @@ export default function Footer() {
         {/* Quick Links */}
         <div className="space-y-5">
           <h4 className="text-walnut text-xs tracking-widest font-semibold uppercase relative after:absolute after:bottom-[-8px] after:left-0 after:w-8 after:h-[1px] after:bg-gold">
-            Quick Links
+            Navigation
           </h4>
-          <ul className="space-y-3 pt-2">
+          <ul className="space-y-3 pt-2 text-sm">
             {quickLinks.map((link) => (
               <li key={link.href}>
-                <Link href={link.href} className="text-sm hover:text-gold transition-colors duration-300 flex items-center gap-1.5">
+                <Link href={link.href} className="hover:text-gold transition-colors duration-300 flex items-center gap-1.5">
                   <span className="w-1 h-1 rounded-full bg-gold/50"></span>
                   {link.name}
                 </Link>
@@ -80,10 +81,10 @@ export default function Footer() {
           <h4 className="text-walnut text-xs tracking-widest font-semibold uppercase relative after:absolute after:bottom-[-8px] after:left-0 after:w-8 after:h-[1px] after:bg-gold">
             Categories
           </h4>
-          <ul className="grid grid-cols-1 gap-2.5 pt-2">
-            {categories.slice(0, 6).map((cat) => (
+          <ul className="space-y-3 pt-2 text-sm">
+            {categories.slice(0, 4).map((cat) => (
               <li key={cat}>
-                <Link href={`/products?category=${encodeURIComponent(cat)}`} className="text-sm hover:text-gold transition-colors duration-300 flex items-center gap-1.5">
+                <Link href={`/products?category=${encodeURIComponent(cat)}`} className="hover:text-gold transition-colors duration-300 flex items-center gap-1.5">
                   <span className="w-1 h-1 rounded-full bg-gold/50"></span>
                   {cat}
                 </Link>
@@ -92,32 +93,29 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Contact Info & Map */}
+        {/* Authorized Dealers Column */}
         <div className="space-y-5">
           <h4 className="text-walnut text-xs tracking-widest font-semibold uppercase relative after:absolute after:bottom-[-8px] after:left-0 after:w-8 after:h-[1px] after:bg-gold">
-            Showroom
+            Authorized Dealers
           </h4>
-          <ul className="space-y-3 pt-2 text-sm text-walnut/60">
-            <li className="flex items-start gap-3">
-              <MapPin size={16} className="text-gold shrink-0 mt-0.5" />
-              <span>Rohini Plywood and Deco Panel, Bangalore, Karnataka, India</span>
-            </li>
-            <li className="flex items-center gap-3">
-              <Phone size={16} className="text-gold shrink-0" />
-              <span>+91 62025 88042, +91 63644 45712</span>
-            </li>
-          </ul>
-          {/* Grayscale Map Embed */}
-          <div className="w-full h-24 relative overflow-hidden grayscale contrast-125 opacity-70 hover:opacity-100 transition-all duration-300 border border-walnut/10 rounded-none">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.2412648750455!2d-73.98784412342878!3d40.7580009713872!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c258a27d4843fd%3A0x22ab59d7b973db63!2sTimes%20Square!5e0!3m2!1sen!2sus!4v1718873000000!5m2!1sen!2sus"
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              allowFullScreen={false}
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
+          <div className="space-y-4 pt-2 text-sm text-walnut/60">
+            <div className="space-y-1">
+              <p className="font-semibold text-walnut leading-snug">Rohini Plywood & Deco Pannels</p>
+              <p className="text-[11px] text-charcoal/50">Bangalore</p>
+            </div>
+            <div className="space-y-0.5">
+              <p className="font-semibold text-walnut">Plywood Emporium</p>
+              <p className="text-[11px] text-charcoal/50">Puducherry</p>
+            </div>
+            <div className="space-y-0.5">
+              <p className="font-semibold text-walnut">Deepam Plywoods</p>
+              <p className="text-[11px] text-charcoal/50">Chennai</p>
+            </div>
+            <div className="pt-2 border-t border-walnut/5">
+              <Link href="/dealers" className="text-xs font-bold uppercase tracking-wider text-gold hover:text-walnut transition-colors flex items-center gap-1">
+                View Dealer Details <ArrowRight size={12} />
+              </Link>
+            </div>
           </div>
         </div>
       </div>
@@ -125,7 +123,7 @@ export default function Footer() {
       {/* Lower Footer */}
       <div className="border-t border-walnut/10 bg-cream/50">
         <div className="max-w-7xl mx-auto px-6 md:px-12 py-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-walnut/50">
-          <p>© {new Date().getFullYear()} Rohini Plywood and Deco Panel. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Poetry Plywood LLP. All rights reserved.</p>
           <div className="flex gap-6">
             <Link href="/privacy" className="hover:text-gold transition-colors">Privacy Policy</Link>
             <Link href="/terms" className="hover:text-gold transition-colors">Terms of Service</Link>

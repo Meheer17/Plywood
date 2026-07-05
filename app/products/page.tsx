@@ -84,7 +84,7 @@ function ProductsContent() {
             The Timber Collection
           </h1>
           <p className="text-white/60 text-sm max-w-xl font-light">
-            Browse our curated collection of luxury plywoods and solid block boards.
+            Browse our curated collection of reliable plywoods, solid blockboards and exquisite laminates.
           </p>
         </div>
       </section>

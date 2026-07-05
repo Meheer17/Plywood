@@ -18,10 +18,10 @@ const sansFont = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Zentree Plywood | Authorized Partner: Rohini Plywood & Deco Panel",
-  description: "Rohini Plywood and Deco Panel is an authorized sales partner of Zentree, offering premium BWP waterproof plywood, semi-calibrated commercial plywood, laminates, and veneers.",
-  keywords: ["Zentree Plywood", "Rohini Plywood and Deco Panel", "Zentree Ultima WP Ply", "Zentree Gold WP Ply", "commercial plywood", "waterproof plywood", "laminates", "MDF boards"],
-  authors: [{ name: "Rohini Plywood & Deco Panel" }],
+  title: "Zentree Plywood | Premium Waterproof & Commercial Plywood",
+  description: "Zentree Plywood offers premium BWP waterproof plywood, semi-calibrated commercial plywood and laminates for luxury and durable interiors.",
+  keywords: ["Zentree Plywood", "Poetry Plywood LLP", "Zentree Ultima WP Ply", "Zentree Gold WP Ply", "commercial plywood", "waterproof plywood", "laminates", "MDF boards"],
+  authors: [{ name: "Zentree Plywood" }],
 };
 
 export default function RootLayout({
