@@ -4,7 +4,25 @@ import { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { Search, SlidersHorizontal, ArrowRight, X } from "lucide-react";
+import {
+  Search,
+  SlidersHorizontal,
+  ArrowRight,
+  X,
+  Leaf,
+  Scale,
+  Shield,
+  Building2,
+  BicepsFlexed,
+  Sparkles,
+  Trophy,
+  Crosshair,
+  Cuboid,
+  Droplet,
+  BugOff,
+  Gem,
+  Infinity as InfinityIcon
+} from "lucide-react";
 import rawProducts from "@/app/data/products.json";
 import ProductModal from "@/app/components/ProductModal";
 
@@ -20,6 +38,33 @@ interface Product {
 }
 
 const mockProducts = rawProducts as unknown as Product[];
+
+const productIcons: Record<string, { icon: React.ComponentType<any>; label: string }[]> = {
+  "ply-zt-project-com": [
+    { icon: Leaf, label: "Neem" },
+    { icon: Scale, label: "Scale" },
+    { icon: Shield, label: "Shield" },
+    { icon: Building2, label: "Buildings" }
+  ],
+  "ply-zt-gurjan": [
+    { icon: BicepsFlexed, label: "Muscle" },
+    { icon: Sparkles, label: "Sparkles" },
+    { icon: Trophy, label: "Trophy" },
+    { icon: Crosshair, label: "Target" }
+  ],
+  "ply-zt-gold": [
+    { icon: Cuboid, label: "Cuboid" },
+    { icon: Droplet, label: "Droplet" },
+    { icon: BugOff, label: "Termite Proof" },
+    { icon: BicepsFlexed, label: "Muscle" }
+  ],
+  "ply-zt-ultima": [
+    { icon: Gem, label: "Diamond" },
+    { icon: BugOff, label: "Termite Proof" },
+    { icon: InfinityIcon, label: "Infinity" },
+    { icon: Droplet, label: "Droplet" }
+  ]
+};
 
 export default function ProductsPageClient() {
   const searchParams = useSearchParams();
@@ -158,7 +203,7 @@ export default function ProductsPageClient() {
             <SlidersHorizontal size={36} className="mx-auto text-walnut/30" />
             <h3 className="font-serif text-lg text-walnut">No Products Match Your Search</h3>
             <p className="text-xs text-walnut/60 max-w-sm mx-auto">
-              Try adjusting your spelling, typing a generic term like "birch" or "oak", or clearing your category filters.
+              Try adjusting your spelling, typing a generic term like &quot;birch&quot; or &quot;oak&quot;, or clearing your category filters.
             </p>
             <button
               onClick={() => { setSearchTerm(""); setSelectedCategory("All"); }}
@@ -177,6 +222,7 @@ export default function ProductsPageClient() {
                 <motion.div
                   key={product.id}
                   layout
+                  onClick={() => setActiveProduct(product)}
                   initial={{ opacity: 0, scale: 0.95 }}
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.95 }}
@@ -203,6 +249,22 @@ export default function ProductsPageClient() {
                       <h3 className="font-serif text-lg font-light text-walnut mt-1">
                         {product.name}
                       </h3>
+                      {productIcons[product.id] && (
+                        <div className="flex flex-wrap gap-3 mt-3 mb-1">
+                          {productIcons[product.id].map((item, idx) => {
+                            const IconComponent = item.icon;
+                            return (
+                              <div
+                                key={idx}
+                                className="text-gold hover:text-walnut transition-colors duration-200"
+                                title={item.label}
+                              >
+                                <IconComponent size={20} className="shrink-0" />
+                              </div>
+                            );
+                          })}
+                        </div>
+                      )}
                       <p className="text-xs text-charcoal/60 mt-2 font-sans font-light leading-relaxed line-clamp-3">
                         {product.description}
                       </p>
@@ -218,7 +280,6 @@ export default function ProductsPageClient() {
 
                   <div className="mt-6 pt-4 border-t border-walnut/5 flex items-center justify-between">
                     <button
-                      onClick={() => setActiveProduct(product)}
                       className="text-xs font-semibold uppercase tracking-widest text-walnut hover:text-gold transition-colors flex items-center gap-1.5 group cursor-pointer"
                     >
                       Specifications

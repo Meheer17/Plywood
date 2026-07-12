@@ -89,7 +89,7 @@ export default function ContactPage() {
               <div className="space-y-2">
                 <h3 className="font-serif text-2xl font-light text-walnut">Project Sourcing Form</h3>
                 <p className="text-xs text-charcoal/50 font-light font-sans">
-                  Submit your requirements below to request custom thicknesses, species samples, or bulk contractor discounts.
+                  Submit your enquiries below.
                 </p>
               </div>
 

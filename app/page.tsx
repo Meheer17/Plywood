@@ -6,7 +6,8 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   ArrowRight, ShieldCheck, Droplet, Bug, Leaf, Award,
-  ChevronLeft, ChevronRight, Star, Quote, Phone, HelpCircle, X
+  ChevronLeft, ChevronRight, Star, Quote, Phone, HelpCircle, X,
+  Scale, Shield, Building2, BicepsFlexed, Sparkles, Trophy, Crosshair, Cuboid, BugOff, Gem, Infinity as InfinityIcon
 } from "lucide-react";
 import rawProducts from "@/app/data/products.json";
 import ProductModal from "@/app/components/ProductModal";
@@ -22,6 +23,33 @@ interface Product {
 }
 
 const mockProducts = rawProducts as unknown as Product[];
+
+const productIcons: Record<string, { icon: React.ComponentType<any>; label: string }[]> = {
+  "ply-zt-project-com": [
+    { icon: Leaf, label: "Neem" },
+    { icon: Scale, label: "Scale" },
+    { icon: Shield, label: "Shield" },
+    { icon: Building2, label: "Buildings" }
+  ],
+  "ply-zt-gurjan": [
+    { icon: BicepsFlexed, label: "Muscle" },
+    { icon: Sparkles, label: "Sparkles" },
+    { icon: Trophy, label: "Trophy" },
+    { icon: Crosshair, label: "Target" }
+  ],
+  "ply-zt-gold": [
+    { icon: Cuboid, label: "Cuboid" },
+    { icon: Droplet, label: "Droplet" },
+    { icon: BugOff, label: "Termite Proof" },
+    { icon: BicepsFlexed, label: "Muscle" }
+  ],
+  "ply-zt-ultima": [
+    { icon: Gem, label: "Diamond" },
+    { icon: BugOff, label: "Termite Proof" },
+    { icon: InfinityIcon, label: "Infinity" },
+    { icon: Droplet, label: "Droplet" }
+  ]
+};
 
 // Reusable animated counter component using native IntersectionObserver (React 19 Safe)
 function AnimatedCounter({ value, duration = 1.5 }: { value: string; duration?: number }) {
@@ -95,7 +123,7 @@ export default function Home() {
     { icon: <Bug className="text-gold" size={24} />, title: "Termite Resistant", desc: "Pressure treated with organic preservatives to prevent borer and wood decay." },
     { icon: <Leaf className="text-gold" size={24} />, title: "Sustainable Sourcing", desc: "Certified forest harvesting complying with FSC® guidelines and E0 emission safety." },
     { icon: <ShieldCheck className="text-gold" size={24} />, title: "Trusted Brands", desc: "Endorsed by leading international architectural bureaus and design houses." },
-    { icon: <HelpCircle className="text-gold" size={24} />, title: "Expert Guidance", desc: "Consult directly with our project wood technicians to finalize specifications." }
+    { icon: <HelpCircle className="text-gold" size={24} />, title: "Expert Guidance", desc: "We provide help in selecting Woods" }
   ];
 
   const testimonials = [
@@ -150,7 +178,7 @@ export default function Home() {
         {/* Parallax / Animated Wood texture background */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://images.unsplash.com/photo-1507346122424-9f719067f08d?q=80&w=1600"
+            src="/hero.jpeg"
             alt="Warm Premium Wood grain Texture"
             fill
             priority
@@ -257,14 +285,14 @@ export default function Home() {
         </div>
       </section>
 
-            {/* 5. ABOUT SECTION */}
+      {/* 5. ABOUT SECTION */}
       <section className="bg-walnut/5 py-24 px-6 md:px-12 w-full">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
 
           {/* Left image */}
           <div className="lg:col-span-5 relative aspect-[4/5] w-full border border-walnut/10 shadow-xl overflow-hidden group">
             <Image
-              src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=800"
+              src="/about.jpeg"
               alt="Artisanal Wood Crafting Workshop"
               fill
               sizes="(max-width: 768px) 100vw, 40vw"
@@ -321,7 +349,7 @@ export default function Home() {
         </div>
       </section>
 
-            {/* 3. WHY CHOOSE US SECTION */}
+      {/* 3. WHY CHOOSE US SECTION */}
       <section className="bg-white text-charcoal border-y border-walnut/10 py-24 px-6 md:px-12 w-full relative">
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-16 items-start">
 
@@ -461,6 +489,7 @@ export default function Home() {
               <motion.div
                 key={product.id}
                 layout
+                onClick={() => setActiveProduct(product)}
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
@@ -487,6 +516,22 @@ export default function Home() {
                     <h3 className="font-serif text-lg font-light text-walnut mt-1">
                       {product.name}
                     </h3>
+                    {productIcons[product.id] && (
+                      <div className="flex flex-wrap gap-3 mt-3 mb-1">
+                        {productIcons[product.id].map((item, idx) => {
+                          const IconComponent = item.icon;
+                          return (
+                            <div
+                              key={idx}
+                              className="text-gold hover:text-walnut transition-colors duration-200"
+                              title={item.label}
+                            >
+                              <IconComponent size={20} className="shrink-0" />
+                            </div>
+                          );
+                        })}
+                      </div>
+                    )}
                     <p className="text-xs text-charcoal/60 mt-2 font-sans font-light leading-relaxed line-clamp-2">
                       {product.description}
                     </p>
@@ -495,7 +540,7 @@ export default function Home() {
 
                 <div className="mt-6 pt-4 border-t border-walnut/5 flex items-center justify-between">
                   <button
-                    onClick={() => setActiveProduct(product)}
+                    
                     className="text-xs font-semibold uppercase tracking-widest text-walnut hover:text-gold transition-colors flex items-center gap-1.5 group cursor-pointer"
                   >
                     Quick View
@@ -539,7 +584,7 @@ export default function Home() {
               <div className="border-b border-walnut/10 pb-3 sm:pb-0">
                 <h4 className="font-serif text-base font-light text-walnut leading-tight">Rohini Plywood & Deco Pannels</h4>
                 <p className="text-[10px] text-charcoal/50 mt-0.5">Bangalore, Karnataka, India</p>
-                <p className="text-[10px] text-gold font-semibold mt-0.5">Primary Distributor</p>
+                <p className="text-[10px] text-gold font-semibold mt-0.5">Authorised Distributor</p>
               </div>
               <div className="border-b border-walnut/10 pb-3 sm:pb-0 sm:border-b-0">
                 <h4 className="font-serif text-base font-light text-walnut leading-tight">Plywood Emporium</h4>

@@ -7,7 +7,7 @@ export default function DealersPage() {
   const dealers = [
     {
       name: "Rohini Plywood & Deco Pannels",
-      tagline: "Primary Distributor - South India",
+      tagline: "Authorised Distributor - South India",
       address: "Rohini Plywood and Deco Pannels, Bangalore, Karnataka, India",
       phone1: "+91 62025 88042",
       phone2: "+91 63644 45712",
@@ -57,7 +57,7 @@ export default function DealersPage() {
 
   return (
     <div className="min-h-screen bg-cream text-charcoal font-sans pt-24 pb-20">
-      
+
       {/* Title Header */}
       <section className="py-12 md:py-20 max-w-7xl mx-auto px-6 md:px-12 text-left">
         <span className="text-gold text-xs font-semibold tracking-[0.3em] uppercase block mb-3">
