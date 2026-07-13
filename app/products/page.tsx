@@ -5,7 +5,7 @@ import ProductsPageClient from "./ProductsPageClient";
 export const metadata: Metadata = {
   title: "The Timber Collection | Premium Plywoods, Blockboards & Laminates",
   description: "Browse the Zentree catalog featuring BWP waterproof plywood (Ultima, Gold), calibrated commercial panels, সুইড Pine solid-core block boards, and textured laminates.",
-  keywords: "calibrated plywood catalog, BWP waterproof plywood sheets, Sweden Pine blockboard, fabric textured laminates, timber inventory bangalore",
+  keywords: "calibrated plywood catalog, BWP waterproof plywood sheets, India Pine blockboard, fabric textured laminates, timber inventory bangalore",
 };
 
 export default function ProductsPage() {

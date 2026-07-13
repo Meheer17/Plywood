@@ -20,13 +20,13 @@ const sansFont = Plus_Jakarta_Sans({
 // A curated collection of 100+ target search keywords and long-tail query phrases
 // mapping directly to user search behaviors for premium plywood, construction, and interior design materials.
 const seoKeywordsList = [
-  "Zentree Plywood", "Poetry Plywood LLP", "Zentree Ultima WP Ply", "Zentree Gold WP Ply", 
+  "Zentree Plywood", "Poetry Plywood LLP", "Zentree Ultima WP Ply", "Zentree Gold WP Ply",
   "Zentree Neem Gurjan Com Ply", "Zentree Project Com Ply", "Zentree Solid Core Block Board",
-  "Sweden Pine block board", "Zentree laminates", "Zentree decorative panels", "commercial plywood",
+  "India Pine block board", "Zentree laminates", "Zentree decorative panels", "commercial plywood",
   "waterproof plywood", "marine grade plywood", "IS 710 plywood", "BWP plywood", "BWR plywood",
   "moisture resistant plywood", "MR grade plywood", "calibrated plywood Bangalore", "calibrated commercial plywood",
   "calibrated waterproof plywood", "double calibrated plywood", "neo calibrated plywood", "red core plywood",
-  "pine blockboard", "Sweden pine core blockboard", "solid core blockboard", "laminates sheets Bangalore",
+  "pine blockboard", "India pine core blockboard", "solid core blockboard", "laminates sheets Bangalore",
   "MDF boards Bangalore", "particle boards", "decorative laminates", "6mm waterproof plywood price",
   "9mm waterproof plywood price", "12mm calibrated plywood", "16mm calibrated plywood", "18mm calibrated plywood",
   "19mm block board Bangalore", "8x4 plywood sheet price Bangalore", "7x4 plywood sheet", "full thickness plywood",
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     default: "Zentree Plywood | Premium Waterproof & Commercial Plywood",
     template: "%s | Zentree Plywood"
   },
-  description: "Zentree Plywood offers premium BWP waterproof plywood, neo-calibrated commercial plywood, Sweden Pine block boards, and fabric-textured laminates for luxury and durable interiors.",
+  description: "Zentree Plywood offers premium BWP waterproof plywood, neo-calibrated commercial plywood, India Pine block boards, and fabric-textured laminates for luxury and durable interiors.",
   keywords: seoKeywordsList,
   authors: [{ name: "Zentree Plywood" }],
   creator: "Zentree Plywood",
@@ -72,7 +72,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Zentree Plywood - Premium Architectural Timber & Panels",
-    description: "Zentree Plywood offers premium BWP waterproof plywood, neo-calibrated commercial plywood, Sweden Pine block boards, and fabric-textured laminates.",
+    description: "Zentree Plywood offers premium BWP waterproof plywood, neo-calibrated commercial plywood, India Pine block boards, and fabric-textured laminates.",
     url: "https://zentreeplywood.com",
     siteName: "Zentree Plywood",
     type: "website",
@@ -100,7 +100,7 @@ const jsonLd = {
   "@type": "LocalBusiness",
   "name": "Zentree Plywood",
   "legalName": "Poetry Plywood LLP",
-  "description": "Zentree Plywood offers premium BWP waterproof plywood, neo-calibrated commercial plywood, Sweden Pine block boards, and fabric-textured laminates.",
+  "description": "Zentree Plywood offers premium BWP waterproof plywood, neo-calibrated commercial plywood, India Pine block boards, and fabric-textured laminates.",
   "image": "https://zentreeplywood.com/zentree_logo.png",
   "@id": "https://zentreeplywood.com/#brand",
   "url": "https://zentreeplywood.com",
