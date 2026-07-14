@@ -52,16 +52,15 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2.5 group">
-          <div className="relative h-10 w-10 shrink-0">
+          <div className="relative h-14 w-16 shrink-0">
             <Image
               src="/zentree_logo.png"
               alt="Zentree Logo Mark"
               fill
-              sizes="40px"
               className="object-contain"
             />
           </div>
-          <div className="relative h-6 w-28 shrink-0">
+          <div className="relative h-14 w-32 shrink-0">
             <Image
               src="/zentree_text_logo.png"
               alt="Zentree Text Logo"
