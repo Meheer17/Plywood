@@ -578,13 +578,13 @@ export default function Home() {
           </div>
 
           <div className="lg:col-span-6 bg-white border border-walnut/15 p-8 sm:p-10 space-y-6 shadow-sm">
-            <span className="text-gold text-xs font-semibold tracking-wider uppercase block">Regional Distribution Partners</span>
+            <span className="text-gold text-xs font-semibold tracking-wider uppercase block">Regional Dealer Partners</span>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div className="border-b border-walnut/10 pb-3 sm:pb-0">
                 <h4 className="font-serif text-base font-light text-walnut leading-tight">Rohini Plywood & Deco Pannels</h4>
                 <p className="text-[10px] text-charcoal/50 mt-0.5">Bangalore, Karnataka, India</p>
-                <p className="text-[10px] text-gold font-semibold mt-0.5">Authorised Distributor</p>
+                <p className="text-[10px] text-gold font-semibold mt-0.5">Authorised Dealers</p>
               </div>
               <div className="border-b border-walnut/10 pb-3 sm:pb-0 sm:border-b-0">
                 <h4 className="font-serif text-base font-light text-walnut leading-tight">Plywood Emporium</h4>
