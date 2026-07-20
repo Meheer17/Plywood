@@ -20,7 +20,7 @@ const sansFont = Plus_Jakarta_Sans({
 // A curated collection of 100+ target search keywords and long-tail query phrases
 // mapping directly to user search behaviors for premium plywood, construction, and interior design materials.
 const seoKeywordsList = [
-  "Zentree Plywood", "Poetry Plywood LLP", "Zentree Ultima WP Ply", "Zentree Gold WP Ply",
+  "Zentree Plywood", "Zentree Ply", "Zentreeply", "Poetry Plywood LLP", "Zentree Ultima WP Ply", "Zentree Gold WP Ply",
   "Zentree Neem Gurjan Com Ply", "Zentree Project Com Ply", "Zentree Solid Core Block Board",
   "India Pine block board", "Zentree laminates", "Zentree decorative panels", "commercial plywood",
   "waterproof plywood", "marine grade plywood", "IS 710 plywood", "BWP plywood", "BWR plywood",

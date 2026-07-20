@@ -128,32 +128,29 @@ export default function Home() {
 
   const testimonials = [
     {
-      text: "The quality of the smoked walnut Plywood from Zentree's distributor is unmatched. We used them in our latest penthouse project, and the depth of natural wood grain exceeded our clients' expectations.",
-      name: "Marcus Vance",
-      role: "Principal Architect, Vance & Partners",
+      text: "I bought Zentree ply... Good quality ISI certified ply and boards at competitive rates. My carpenter found the BWP grade ply heavy and hard. He could tell it had been chemically well treated when he later cut it",
+      name: "Arjun",
+      role: "Homeowner",
       avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=120"
     },
     {
-      text: "Zentree's BWP Gold and Ultima waterproof plywood options have become our standard. Incredibly stable, zero internal voids, and absolute peace of mind during heavy seasonal rains.",
-      name: "Elena Rostova",
-      role: "Creative Director, Rostova Design Studio",
+      text: "Wonderful experience overall. Best quality Plywood (Zentree)... at a reasonable price. Highly recommend!",
+      name: "Srini Reddy",
+      role: "Homeowner",
       avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=120"
     },
     {
-      text: "We sourced custom curved timber baffles from Zentree's authorized dealer. Their engineering precision, scheduling, and craftsmanship were truly world-class.",
-      name: "David Cho",
-      role: "Senior Construction Manager, BuildCorp",
+      text: "Hands down the best quality plywood we’ve used. It’s heavy, rock-solid, and cuts cleanly without any hollow gaps inside. Highly recommend Zentree if you want durability.",
+      name: "Santhosh Patil",
+      role: "Contractor",
+      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=120"
+    },
+     {
+      text: "Tested a piece of Zentree Ultima with our carpenter before installing—it’s heavily packed, solid, and holds up perfectly against moisture. The best BWP (Boiling Water Proof) ply in this budget.",
+      name: "Lokesh Gowda",
+      role: "Architect",
       avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=120"
     }
-  ];
-
-  const partners = [
-    { name: "Porro", id: 1 },
-    { name: "Herman Miller", id: 2 },
-    { name: "Fritz Hansen", id: 3 },
-    { name: "B&B Italia", id: 4 },
-    { name: "Poliform", id: 5 },
-    { name: "Ligne Roset", id: 6 }
   ];
 
   const showcaseCategories = ["All", "Premium (Waterproof) Plywood", "Commercial Plywood", "Block Boards", "Laminates"];
