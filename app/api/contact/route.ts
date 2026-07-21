@@ -87,7 +87,7 @@ export async function POST(request: Request) {
               <td style="padding: 6px 0; font-weight: bold; color: #333;"><a href="mailto:${email}" style="color: #8C6239; text-decoration: none;">${email}</a></td>
             </tr>
             <tr>
-              <td style="padding: 6px 0; color: #666; font-size: 13px;">Required Category:</td>
+              <td style="padding: 6px 0; color: #666; font-size: 13px;">Required Categories:</td>
               <td style="padding: 6px 0; font-weight: bold; color: #333;">${requirement}</td>
             </tr>
           </table>

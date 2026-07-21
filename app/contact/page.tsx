@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Phone, Mail, MapPin, Clock, MessageSquare, ArrowRight, ShieldCheck } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, MessageSquare, ArrowRight, ShieldCheck, Check } from "lucide-react";
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
@@ -13,12 +13,18 @@ export default function ContactPage() {
     name: "",
     phone: "",
     email: "",
-    requirement: "Premium (Waterproof) Plywood",
     message: ""
   });
+  const [selectedRequirements, setSelectedRequirements] = useState<string[]>([
+    "Premium (Waterproof) Plywood"
+  ]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (selectedRequirements.length === 0) {
+      setErrorMsg("Please select at least one product requirement.");
+      return;
+    }
     setLoading(true);
     setErrorMsg("");
     try {
@@ -27,7 +33,10 @@ export default function ContactPage() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          requirement: selectedRequirements.join(", ")
+        }),
       });
 
       const data = await res.json();
@@ -37,9 +46,9 @@ export default function ContactPage() {
           name: "",
           phone: "",
           email: "",
-          requirement: "Premium (Waterproof) Plywood",
           message: ""
         });
+        setSelectedRequirements(["Premium (Waterproof) Plywood"]);
       } else {
         setErrorMsg(data.error || "Failed to submit request. Please try again.");
       }
@@ -117,30 +126,62 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <div className="space-y-2">
-                  <label className="text-[10px] font-bold text-walnut/60 uppercase tracking-widest block">Email Address *</label>
-                  <input
-                    type="email"
-                    required
-                    placeholder="e.g. alexis@studio.com"
-                    value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full bg-cream/50 border border-walnut/15 px-4 py-3 text-sm focus:outline-none focus:border-gold text-charcoal rounded-none"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <label className="text-[10px] font-bold text-walnut/60 uppercase tracking-widest block">Product Requirement *</label>
-                  <select
-                    value={formData.requirement}
-                    onChange={(e) => setFormData({ ...formData, requirement: e.target.value })}
-                    className="w-full bg-cream/50 border border-walnut/15 px-4 py-3 text-sm focus:outline-none focus:border-gold text-charcoal rounded-none"
-                  >
-                    <option value="Premium (Waterproof) Plywood">Premium (Waterproof) Plywood</option>
-                    <option value="Commercial Plywood">Commercial Plywood</option>
-                    <option value="Block Boards">Block Boards</option>
-                    <option value="Laminates">Laminates</option>
-                  </select>
+              <div className="space-y-2">
+                <label className="text-[10px] font-bold text-walnut/60 uppercase tracking-widest block">Email Address *</label>
+                <input
+                  type="email"
+                  required
+                  placeholder="e.g. alexis@studio.com"
+                  value={formData.email}
+                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                  className="w-full bg-cream/50 border border-walnut/15 px-4 py-3 text-sm focus:outline-none focus:border-gold text-charcoal rounded-none"
+                />
+              </div>
+
+              <div className="space-y-3">
+                <label className="text-[10px] font-bold text-walnut/60 uppercase tracking-widest block">
+                  Product Requirements * (Select all that apply)
+                </label>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  {[
+                    "Premium (Waterproof) Plywood",
+                    "Commercial Plywood",
+                    "Block Boards",
+                    "Laminates"
+                  ].map((option) => {
+                    const isSelected = selectedRequirements.includes(option);
+                    return (
+                      <button
+                        key={option}
+                        type="button"
+                        onClick={() => {
+                          if (isSelected) {
+                            setSelectedRequirements(
+                              selectedRequirements.filter((item) => item !== option)
+                            );
+                          } else {
+                            setSelectedRequirements([...selectedRequirements, option]);
+                          }
+                        }}
+                        className={`flex items-center justify-between px-5 py-4 border transition-all duration-300 text-sm text-left cursor-pointer rounded-none ${
+                          isSelected
+                            ? "bg-walnut/5 border-gold text-walnut font-medium shadow-sm"
+                            : "bg-cream/40 border-walnut/15 text-charcoal/80 hover:border-walnut/40 hover:bg-cream/60"
+                        }`}
+                      >
+                        <span className="tracking-wide">{option}</span>
+                        <div
+                          className={`w-5 h-5 border flex items-center justify-center transition-all duration-300 ${
+                            isSelected
+                              ? "bg-gold border-gold text-walnut"
+                              : "border-walnut/25 bg-white"
+                          }`}
+                        >
+                          {isSelected && <Check size={12} className="stroke-[3]" />}
+                        </div>
+                      </button>
+                    );
+                  })}
                 </div>
               </div>
 
